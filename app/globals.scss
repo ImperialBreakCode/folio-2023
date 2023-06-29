@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$background-color-main: #131313;
+
+* {
+	margin: 0;
+	padding: 0;
+	color: #dedede;
+}
+
+body {
+	background: $background-color-main;
+}
+
+.menu-button {
+	span {
+		background-color: #d4d4d4;
+		clip-path: ellipse(30% 0% at 50% 100%);
+		transition: 0.3s clip-path;
+		z-index: -1;
+	}
+
+	&:hover span {
+		clip-path: ellipse(100% 100% at 50% 80%);
+	}
+}
+
+.heading-name{
+	line-height: normal;
+}
