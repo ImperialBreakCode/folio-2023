@@ -22,7 +22,7 @@ const FlowingHeadingText = ({
     }
 
 	return (
-		<h1 className={`${className} text-[8rem] mt-[7vh] lg:text-[7rem] whitespace-nowrap`}>
+		<h1 className={`${className} text-[8rem] mt-[8vh] lg:text-[7rem] whitespace-nowrap uppercase`}>
 			{flowHtml(count)}
 		</h1>
 	);
