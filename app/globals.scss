@@ -12,6 +12,7 @@ $background-color-main: #131313;
 
 body {
 	background: $background-color-main;
+	overflow-x: hidden;
 }
 
 .menu-button {
@@ -25,8 +26,4 @@ body {
 	&:hover span {
 		clip-path: ellipse(100% 100% at 50% 80%);
 	}
-}
-
-.heading-name{
-	line-height: normal;
 }

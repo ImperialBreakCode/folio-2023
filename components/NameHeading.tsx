@@ -1,13 +1,15 @@
 import { CormorantGaramond } from '@/app/fonts';
 
-const NameHeading = ({ children, ...args }: { children: React.ReactNode }) => {
+const NameHeading = ({
+	children,
+	className,
+}: {
+	children: React.ReactNode;
+	className?: string;
+}) => {
 	return (
 		<h2
-			className={
-				CormorantGaramond.className +
-				' heading-name text-[11vh] capitalize font-light absolute left-[11%] top-[10%]'
-			}
-			{...args}
+			className={`${CormorantGaramond.className} ${className} lg:text-[5rem] 2xl:text-[5.5rem] capitalize font-light mx-[10%] mt-[11vh]`}
 		>
 			{children}
 		</h2>

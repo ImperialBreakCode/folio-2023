@@ -1,0 +1,14 @@
+.heading-name{
+	line-height: normal;
+}
+
+@media (min-width: 1920px) {
+
+	.heading-name{
+		font-size: 6.9rem!important;
+	}
+
+    .flow-text{
+        font-size: 9rem;
+    }
+}
