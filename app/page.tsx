@@ -5,13 +5,18 @@ import styles from './styles.module.scss';
 export default function Home() {
 	return (
 		<main>
-			<NameHeading className={styles['heading-name']}>
-				Christopher <br /> Alexander <br /> Petrov
-			</NameHeading>
 
-			<FlowingHeadingText className={styles['flow-text']}>
-				<i>Software</i> engineer student →&#160;
-			</FlowingHeadingText>
+			<section>
+				<NameHeading className={styles['heading-name']}>
+					Christopher <br /> Alexander <br /> Petrov
+				</NameHeading>
+
+				<FlowingHeadingText className={styles['flow-text']}>
+					<i>Software</i> engineer student →&#160;
+				</FlowingHeadingText>
+			</section>
+
+
 		</main>
 	);
 }

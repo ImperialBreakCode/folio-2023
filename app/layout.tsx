@@ -1,5 +1,5 @@
 import MenuButton from '@/components/MenuButton';
-import FolioHeader from '@/components/FolioHeader';
+import Header from '@/components/Header';
 import { DMSans } from './fonts';
 import './globals.scss';
 
@@ -16,9 +16,9 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={DMSans.className}>
-				<FolioHeader>
+				<Header>
 					<MenuButton text='menu' />
-				</FolioHeader>
+				</Header>
 				{children}
 			</body>
 		</html>

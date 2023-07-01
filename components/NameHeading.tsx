@@ -9,7 +9,8 @@ const NameHeading = ({
 }) => {
 	return (
 		<h2
-			className={`${CormorantGaramond.className} ${className} lg:text-[5rem] 2xl:text-[5.5rem] capitalize font-light mx-[10%] mt-[11vh]`}
+			className={`${CormorantGaramond.className} ${className}
+			text-[4.5rem] md:text-[5rem] 2xl:text-[5.5rem] capitalize font-light mx-[10%] md:mt-[11vh]`}
 		>
 			{children}
 		</h2>

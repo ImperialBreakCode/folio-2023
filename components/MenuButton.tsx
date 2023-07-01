@@ -5,9 +5,12 @@ type MenuBtnProps = {
 const MenuButton = ({ text, ...args }: MenuBtnProps) => {
 	return (
 		<button
-			className='menu-button text-[#a1a1a1] hover:text-black capitalize text-[2rem]
-			rounded-full border-[#616161c8]
-			border-[1px] overflow-hidden px-[6%] py-[1.3vh] ms-auto relative
+			className='menu-button
+			text-[#c1c1c1] hover:text-black capitalize sm:text-[2rem]
+			rounded-full border-[#8e8d8d92] border-[1px]
+			overflow-hidden
+			md:px-[6%] py-[1.3vh] px-[20%] md:ms-auto mb-[40px] mt-[30px]
+			relative
 			transition-colors duration-200'
 			{...args}
 		>
