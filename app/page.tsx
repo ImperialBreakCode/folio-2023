@@ -9,8 +9,8 @@ export default function Home() {
 				Christopher <br /> Alexander <br /> Petrov
 			</NameHeading>
 
-			<FlowingHeadingText className={styles['flow-text']} count={2}>
-				<i>Software</i> engineer student → {' '}
+			<FlowingHeadingText className={styles['flow-text']}>
+				<i>Software</i> engineer student →&#160;
 			</FlowingHeadingText>
 		</main>
 	);
