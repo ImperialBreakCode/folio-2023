@@ -1,19 +1,27 @@
 import { CormorantGaramond } from '@/app/fonts';
 
-const NameHeading = ({
-	children,
-	className,
-}: {
-	children: React.ReactNode;
+type NameHeadingProps = {
+	firstName: string;
+	secondFirstName: string;
+	lastName: string;
 	className?: string;
-}) => {
+}
+
+const NameHeading = ({
+	firstName,
+	secondFirstName,
+	lastName,
+	className,
+}: NameHeadingProps) => {
 	return (
-		<h2
+		<div
 			className={`${CormorantGaramond.className} ${className}
-			text-[4.5rem] md:text-[5rem] 2xl:text-[5.5rem] capitalize font-light mx-[10%] md:mt-[11vh]`}
+			text-[4.5rem] 2xl:text-[5.5rem] capitalize font-light`}
 		>
-			{children}
-		</h2>
+			<h2>{firstName}</h2>
+			<h2>{secondFirstName}</h2>
+			<h2>{lastName}</h2>
+		</div>
 	);
 };
 

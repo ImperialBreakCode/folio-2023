@@ -1,5 +1,6 @@
 import MenuButton from '@/components/MenuButton';
 import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
 import { DMSans } from './fonts';
 import './globals.scss';
 
@@ -18,6 +19,7 @@ export default function RootLayout({
 			<body className={DMSans.className}>
 				<Header>
 					<MenuButton text='menu' />
+					<Navigation></Navigation>
 				</Header>
 				{children}
 			</body>

@@ -31,3 +31,24 @@ main{
 		clip-path: ellipse(100% 100% at 50% 80%);
 	}
 }
+
+@media (max-width: 767px){
+	.navigation{
+		display: none;
+	}
+}
+
+@layer components{
+	.nav-btn{
+		@apply mx-[10px] text-[#c3c3c3] uppercase transition-colors
+		duration-[0.3s] hover:text-[#ffffff]
+		relative
+		after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-white after:w-0
+		after:transition-all after:duration-[0.5sec]
+		after:hover:w-full;
+	}
+
+	.nav-active{
+		@apply text-[#ffffff];
+	}
+}
