@@ -1,5 +1,15 @@
 .heading-name{
-	line-height: normal;
+	line-height: 90%;
+
+	h2{
+		color: #c6c6c6;
+	}
+}
+
+@media (max-width: 1000px){
+	.heading-name h2{
+		transform: translateX(0)!important;
+	}
 }
 
 @media (min-width: 1920px) {

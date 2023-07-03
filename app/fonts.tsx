@@ -8,6 +8,6 @@ export const DMSans = DM_Sans({
 
 export const CormorantGaramond = Cormorant_Garamond({
 	weight: '300',
-	style: 'italic',
+	style: ['italic', 'normal'],
 	subsets: ['latin']
 });
