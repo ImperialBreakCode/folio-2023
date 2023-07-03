@@ -1,3 +1,5 @@
+import { HiOutlineBars3BottomRight } from 'react-icons/hi2';
+
 type MenuBtnProps = {
 	text: string;
 };
@@ -5,17 +7,20 @@ type MenuBtnProps = {
 const MenuButton = ({ text, ...args }: MenuBtnProps) => {
 	return (
 		<button
-			className='menu-button md:hidden
-			text-[#c1c1c1] hover:text-black capitalize sm:text-[2rem]
+			className='group/menu-btn menu-button md:hidden
 			rounded-full border-[#8e8d8d92] border-[1px]
 			overflow-hidden
 			md:px-[6%] py-[1.3vh] px-[20%] md:ms-auto mb-[40px] mt-[30px]
-			relative
-			transition-colors duration-200'
+			relative'
 			{...args}
 		>
-			<span className='absolute left-0 top-0 w-full h-full'></span>
-			{text}
+			<span className='on-hover-bg absolute left-0 top-0 w-full h-full hidden sm:inline'></span>
+
+			<HiOutlineBars3BottomRight className='sm:hidden text-[2rem]' />
+			<span className='hidden sm:inline text-[#c1c1c1] group-hover/menu-btn:text-black capitalize
+			text-[2rem] transition-colors duration-200'>
+				{text}
+			</span>
 		</button>
 	);
 };

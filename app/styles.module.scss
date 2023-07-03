@@ -6,6 +6,12 @@
 	}
 }
 
+@media (max-width: 640px){
+	.heading-name{
+		justify-content: space-around;
+	}
+}
+
 @media (max-width: 1000px){
 	.heading-name h2{
 		transform: translateX(0)!important;

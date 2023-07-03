@@ -16,8 +16,9 @@ const NameHeading = ({
 	return (
 		<div
 			className={`${CormorantGaramond.className} ${className}
-			text-[4.5rem] 2xl:text-[5.5rem] capitalize font-light flex flex-col items-center
-			mt-[10vh] sm:italic`}
+			text-[1.5rem] sm:text-[4.5rem] 2xl:text-[5.5rem] capitalize font-light
+			flex sm:flex-col items-center
+			sm:mt-[10vh] sm:italic`}
 		>
 			<h2 style={{ transform: 'translateX(-80%)' }}>{firstName}</h2>
 

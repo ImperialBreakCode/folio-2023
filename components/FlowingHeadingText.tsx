@@ -25,8 +25,8 @@ const FlowingHeadingText = ({
 	return (
 		<div className='mt-[8vh] overflow-hidden'>
 			<h1
-				className={`${className} text-[2rem] sm:text-[4rem] md:text-[6rem] xl:text-[7rem]
-				whitespace-nowrap uppercase flex flex-row`}
+				className={`${className} sm:text-[4rem] md:text-[6rem] xl:text-[7rem]
+				whitespace-nowrap uppercase hidden sm:flex sm:flex-row`}
                 style={{transform: 'translateX(-100%)'}}
 			>
 				{flowHtml()}

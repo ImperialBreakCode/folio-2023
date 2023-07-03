@@ -20,14 +20,14 @@ main{
 }
 
 .menu-button {
-	span {
+	.on-hover-bg {
 		background-color: #d4d4d4;
 		clip-path: ellipse(30% 0% at 50% 100%);
 		transition: 0.3s clip-path;
 		z-index: -1;
 	}
 
-	&:hover span {
+	&:hover .on-hover-bg {
 		clip-path: ellipse(100% 100% at 50% 80%);
 	}
 }
