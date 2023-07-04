@@ -2,9 +2,14 @@
 	line-height: 90%;
 
 	h2{
+		color: $color-white;
 		color: $secondary-light;
 	}
 }
+
+// .flow-text span, .flow-text i{
+// 	color: $main-medium;
+// }
 
 @media (max-width: 640px){
 	.heading-name{
