@@ -18,7 +18,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={DMSans.className}>
 				<Header>
-					<MenuButton text='menu' />
+					<MenuButton text='menu'/>
 					<Navigation></Navigation>
 				</Header>
 				{children}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Navigation = () => {
 	return (
-		<nav className='navigation w-[80%] flex flex-row items-center justify-between'>
+		<nav className='navigation w-[90%] flex flex-row items-center justify-between'>
 			<Link className='uppercase' href='#'>folio - 2023</Link>
 
 			<ul className='flex flex-row'>
