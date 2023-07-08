@@ -1,4 +1,4 @@
-import { DM_Sans, Cormorant_Garamond, Karla } from 'next/font/google';
+import { DM_Sans, Cormorant_Garamond } from 'next/font/google';
 
 export const DMSans = DM_Sans({
 	weight: '400',
