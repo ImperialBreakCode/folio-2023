@@ -1,21 +1,45 @@
 'use client';
 
-import { Canvas, extend } from '@react-three/fiber';
-import { MeshBasicMaterial, SphereGeometry } from 'three';
+import { Canvas, RootState, extend, useFrame } from '@react-three/fiber';
+import { useEffect, useRef } from 'react';
+import { Mesh, SphereGeometry } from 'three';
 
 extend(SphereGeometry);
 
 const LeftSphere = () => {
+
+    const onCreation = ({camera} : RootState) => {
+        camera.position.y = 1;
+        camera.lookAt(0, 0, 0);
+        camera.rotation.z = 0.5;
+    }
+
 	return (
-		<div className='w-full'>
-			<Canvas>
-				<mesh>
-                    <color attach={'background'} args={[0, 0, 16]}/>
-					<sphereGeometry args={[1, 16, 16]} />
-					<meshBasicMaterial color={0x6720ff} />
-				</mesh>
+		<div className='w-full aspect-square'>
+			<Canvas onCreated={onCreation}>
+				<color attach={'background'} args={[0.15, 0, 1]} />
+				<SphereMesh/>
 			</Canvas>
 		</div>
+	);
+};
+
+const SphereMesh = () => {
+	const sphere = useRef<Mesh>(null);
+
+	useFrame(({ clock }: RootState) => {
+
+        if (sphere.current) {
+            sphere.current.rotation.y = clock.getElapsedTime() / 3;
+        }
+
+	});
+
+	return (
+		<mesh ref={sphere}>
+			<sphereGeometry args={[2.5, 24, 24]} />
+			<meshBasicMaterial color={'black'} wireframe />
+		</mesh>
 	);
 };
 
