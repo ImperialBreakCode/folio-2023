@@ -2,6 +2,8 @@ import FlowingHeadingText from '@/components/FlowingHeadingText';
 import NameHeading from '@/components/NameHeading';
 import styles from './styles.module.scss';
 import MobileHeading from '@/components/MobileHeading';
+import LeftSphere from '@/components/LeftSphere';
+import RedirectBtn from '@/components/RedirectBtn';
 
 export default function Home() {
 	return (
@@ -24,8 +26,14 @@ export default function Home() {
 			</section>
 
 			<section className='mt-10'>
-				<div className='px-20 py-10 flex flex-row'>
-					<div className='w-[34%]'>smth</div>
+				<div className='py-10 flex flex-row'>
+					<div className='w-[34%]'>
+						<div className='flex items-center flex-col'>
+							<LeftSphere/>
+							<RedirectBtn>More about me</RedirectBtn>
+						</div>
+
+					</div>
 					<div className='w-[7%] pt-2'>
 						<p className='uppercase text-[#acacac]'>about me</p>
 					</div>
