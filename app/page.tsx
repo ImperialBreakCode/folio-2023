@@ -1,9 +1,9 @@
 import FlowingHeadingText from '@/components/home/FlowingHeadingText';
 import NameHeading from '@/components/home/NameHeading';
-import styles from './styles.module.scss';
 import MobileHeading from '@/components/home/MobileHeading';
-import LeftSphere from '@/components/home/LeftSphere';
-import RedirectBtn from '@/components/common/RedirectBtn';
+import AboutMeLeftSide from '@/components/home/AboutMeLeftSide';
+
+import styles from './styles.module.scss';
 
 export default function Home() {
 	return (
@@ -28,10 +28,7 @@ export default function Home() {
 			<section className='mt-10'>
 				<div className='py-10 flex flex-row'>
 					<div className='w-[34%] pe-[4%]'>
-						<div className='flex items-center flex-col'>
-							<LeftSphere />
-							<RedirectBtn>More about me</RedirectBtn>
-						</div>
+						<AboutMeLeftSide/>
 					</div>
 					<div className='w-[7%] pt-2'>
 						<p className='uppercase text-[#acacac]'>about me</p>

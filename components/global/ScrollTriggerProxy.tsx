@@ -3,7 +3,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect } from 'react';
-import { LocomotiveScrollContextValue, useLocomotiveScroll } from 'react-locomotive-scroll';
+import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 const ScrollTriggerProxy = () => {
 	const { scroll } = useLocomotiveScroll();
@@ -35,11 +35,17 @@ const ScrollTriggerProxy = () => {
 					};
 				},
 				// LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-				pinType: (document.querySelector('#loco-cont') as HTMLDivElement).style.transform
+				pinType: element.style.transform
 					? 'transform'
 					: 'fixed',
 			});
 		}
+
+		return () => {
+			ScrollTrigger.addEventListener('refresh', () => scroll?.update());
+			ScrollTrigger.refresh();
+		};
+
 	}, [scroll]);
 
 	return null;

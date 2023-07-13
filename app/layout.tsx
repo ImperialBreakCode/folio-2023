@@ -9,7 +9,6 @@ import { DMSans } from './fonts';
 import './globals.scss';
 import '../styles/locomotive.scss';
 
-
 export const metadata = {
 	title: 'Portfolio 2023',
 	description: 'Work in progress...',
@@ -24,10 +23,10 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={DMSans.className}>
 				<LocomotiveScroll>
-					<ScrollTriggerProxy/>
+					<ScrollTriggerProxy />
 					<Header>
 						<MenuButton text='menu' />
-						<Navigation></Navigation>
+						<Navigation />
 					</Header>
 					{children}
 				</LocomotiveScroll>
