@@ -14,6 +14,7 @@ const LocomotiveScroll = ({ children }: Props) => {
 		<LocomotiveScrollProvider
 			options={{
 				smooth: true,
+				multiplier: 1,
 				// ... all available Locomotive Scroll instance options
 			}}
 			watch={
@@ -25,7 +26,7 @@ const LocomotiveScroll = ({ children }: Props) => {
 			}
 			containerRef={containerRef}
 		>
-			<div data-scroll-container ref={containerRef}>
+			<div data-scroll-container ref={containerRef} id='loco-cont'>
 				{children}
 			</div>
 		</LocomotiveScrollProvider>
