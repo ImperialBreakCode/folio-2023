@@ -1,23 +1,25 @@
 'use client';
 
 import { Canvas, RootState, extend, useFrame } from '@react-three/fiber';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Mesh, SphereGeometry } from 'three';
 
 extend(SphereGeometry);
 
 const LeftSphere = () => {
 
-    const onCreation = ({camera} : RootState) => {
+    const onCreation = ({camera, gl} : RootState) => {
+
+		gl.setClearColor(0x6720FF);
+
         camera.position.y = 1;
         camera.lookAt(0, 0, 0);
         camera.rotation.z = 0.5;
     }
 
 	return (
-		<div className='w-full aspect-square'>
+		<div className='w-full aspect-square mb-24'>
 			<Canvas onCreated={onCreation}>
-				<color attach={'background'} args={[0.15, 0, 1]} />
 				<SphereMesh/>
 			</Canvas>
 		</div>

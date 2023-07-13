@@ -1,4 +1,4 @@
-.heading-name{
+.headingName{
 	line-height: 90%;
 
 	h2{
@@ -12,24 +12,31 @@
 // }
 
 @media (max-width: 640px){
-	.heading-name{
+	.headingName{
 		justify-content: space-around;
 	}
 }
 
 @media (max-width: 1000px){
-	.heading-name h2{
+	.headingName h2{
 		transform: translateX(0)!important;
+	}
+}
+
+@media(min-width: 1700px){
+	.aboutMeText{
+		font-size: 3.3rem;
+		line-height: 3.5rem;
 	}
 }
 
 @media (min-width: 1920px) {
 
-	.heading-name{
+	.headingName{
 		font-size: 6.9rem;
 	}
 
-    .flow-text{
+    .flowText{
         font-size: 8rem;
     }
 }

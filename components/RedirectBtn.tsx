@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { ReactNode } from 'react';
 
 type BtnProps = {
@@ -5,7 +6,7 @@ type BtnProps = {
 };
 
 const RedirectBtn = ({ children }: BtnProps) => {
-	return <button className='text-[1.5rem] underline'>{children} →</button>;
+	return <Link className='text-[1.5rem] underline' href='#'>{children} →</Link>;
 };
 
 export default RedirectBtn;

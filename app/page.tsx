@@ -14,20 +14,20 @@ export default function Home() {
 				</MobileHeading>
 
 				<NameHeading
-					className={styles['heading-name']}
+					className={styles.headingName}
 					firstName='Christopher'
 					secondFirstName='Alexander'
 					lastName='Petrov'
 				/>
 
-				<FlowingHeadingText className={styles['flow-text']}>
+				<FlowingHeadingText className={styles.flowText}>
 					<i>Software</i> engineer student →&#160;
 				</FlowingHeadingText>
 			</section>
 
 			<section className='mt-10'>
 				<div className='py-10 flex flex-row'>
-					<div className='w-[34%]'>
+					<div className='w-[34%] pe-[4%]'>
 						<div className='flex items-center flex-col'>
 							<LeftSphere/>
 							<RedirectBtn>More about me</RedirectBtn>
@@ -37,8 +37,8 @@ export default function Home() {
 					<div className='w-[7%] pt-2'>
 						<p className='uppercase text-[#acacac]'>about me</p>
 					</div>
-					<div className='w-[59%]'>
-						<p className='text-[#b6b6b6] text-5xl w-5/6 leading-[3.4rem]'>
+					<div className='w-[55%]'>
+						<p className={`text-[#b6b6b6] text-4xl w-5/6 leading-[3rem] ${styles.aboutMeText}`}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 							Vestibulum vel diam auctor, fermentum quam nec, mollis
 							enim. Nulla condimentum leo at arcu commodo, ac tempor
