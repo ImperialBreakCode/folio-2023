@@ -1,12 +1,14 @@
-import MenuButton from '@/components/MenuButton';
-import Header from '@/components/Header';
-import Navigation from '@/components/Navigation';
-import LocomotiveScroll from '@/components/LocomotiveScroll';
+import MenuButton from '@/components/global/MenuButton';
+import Header from '@/components/global/Header';
+import Navigation from '@/components/global/Navigation';
+import LocomotiveScroll from '@/components/global/LocomotiveScroll';
+import ScrollTriggerProxy from '@/components/global/ScrollTriggerProxy';
+
 import { DMSans } from './fonts';
 
 import './globals.scss';
 import '../styles/locomotive.scss';
-import ScrollTriggerProxy from '@/components/ScrollTriggerProxy';
+
 
 export const metadata = {
 	title: 'Portfolio 2023',

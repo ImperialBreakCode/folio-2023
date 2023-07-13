@@ -1,9 +1,9 @@
-import FlowingHeadingText from '@/components/FlowingHeadingText';
-import NameHeading from '@/components/NameHeading';
+import FlowingHeadingText from '@/components/home/FlowingHeadingText';
+import NameHeading from '@/components/home/NameHeading';
 import styles from './styles.module.scss';
-import MobileHeading from '@/components/MobileHeading';
-import LeftSphere from '@/components/LeftSphere';
-import RedirectBtn from '@/components/RedirectBtn';
+import MobileHeading from '@/components/home/MobileHeading';
+import LeftSphere from '@/components/home/LeftSphere';
+import RedirectBtn from '@/components/common/RedirectBtn';
 
 export default function Home() {
 	return (
