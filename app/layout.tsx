@@ -2,7 +2,10 @@ import MenuButton from '@/components/MenuButton';
 import Header from '@/components/Header';
 import Navigation from '@/components/Navigation';
 import { DMSans } from './fonts';
+
 import './globals.scss';
+import '../styles/locomotive.scss';
+import LocomotiveScroll from '@/components/LocomotiveScroll';
 
 export const metadata = {
 	title: 'Portfolio 2023',
@@ -17,11 +20,13 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={DMSans.className}>
-				<Header>
-					<MenuButton text='menu'/>
-					<Navigation></Navigation>
-				</Header>
-				{children}
+				<LocomotiveScroll>
+					<Header>
+						<MenuButton text='menu' />
+						<Navigation></Navigation>
+					</Header>
+					{children}
+				</LocomotiveScroll>
 			</body>
 		</html>
 	);
