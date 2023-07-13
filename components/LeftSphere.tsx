@@ -32,7 +32,7 @@ const SphereMesh = () => {
 	useFrame(({ clock }: RootState) => {
 
         if (sphere.current) {
-            sphere.current.rotation.y = clock.getElapsedTime() / 3;
+            sphere.current.rotation.y = clock.getElapsedTime() / 4;
         }
 
 	});
