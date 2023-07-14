@@ -20,10 +20,7 @@ const ScrollTriggerProxy = () => {
 			ScrollTrigger.scrollerProxy(element, {
 				scrollTop(value) {
 					return arguments.length
-						? scroll.scrollTo(value, {
-								duration: 0,
-								disableLerp: true,
-						  })
+						? scroll.scrollTo(value, 0, 0)
 						: scroll.scroll.instance.scroll.y;
 				}, // we don't have to define a scrollLeft because we're only scrolling vertically.
 				getBoundingClientRect() {
@@ -39,12 +36,14 @@ const ScrollTriggerProxy = () => {
 					? 'transform'
 					: 'fixed',
 			});
+
+			ScrollTrigger.addEventListener('refresh', () => scroll?.update());
+			ScrollTrigger.refresh();
 		}
 
 		return () => {
-			ScrollTrigger.addEventListener('refresh', () => scroll?.update());
-			ScrollTrigger.refresh();
-		};
+			ScrollTrigger.removeEventListener('refresh', () => scroll?.update());
+		}
 
 	}, [scroll]);
 

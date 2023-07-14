@@ -8,15 +8,30 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const AboutMeLeftSide = () => {
 
-	let ref = useRef<HTMLDivElement>(null);
+	gsap.registerPlugin(ScrollTrigger);
+	const ref = useRef<HTMLDivElement>(null);
 
 	useLayoutEffect(() => {
 
 		let scrollingElement = ref.current;
 
+		let t1 = gsap.timeline();
+
 		setTimeout(() => {
-			// continue tomorrow
-		});
+			t1.to(scrollingElement, {
+				scrollTrigger: {
+					trigger: scrollingElement,
+					start: 'top center',
+					scroller: '.app-scroller',
+					scrub: true,
+					markers: true
+				},
+				ease: 'none',
+				x: 100
+			});
+
+			ScrollTrigger.refresh();
+		}, 1000);
 
 	}, []);
 

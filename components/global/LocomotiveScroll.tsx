@@ -26,7 +26,7 @@ const LocomotiveScroll = ({ children }: Props) => {
 			}
 			containerRef={containerRef}
 		>
-			<div data-scroll-container ref={containerRef}>
+			<div className='app-scroller' data-scroll-container ref={containerRef}>
 				{children}
 			</div>
 		</LocomotiveScrollProvider>
