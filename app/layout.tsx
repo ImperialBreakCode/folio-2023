@@ -1,8 +1,7 @@
 import MenuButton from '@/components/global/MenuButton';
 import Header from '@/components/global/Header';
 import Navigation from '@/components/global/Navigation';
-import LocomotiveScroll from '@/components/global/LocomotiveScroll';
-import ScrollTriggerProxy from '@/components/global/ScrollTriggerProxy';
+import LocoScroll from '@/components/global/LocoScroll';
 
 import { DMSans } from './fonts';
 
@@ -22,14 +21,14 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={DMSans.className}>
-				<LocomotiveScroll>
-					<ScrollTriggerProxy />
+				<LocoScroll>
+					{/* <ScrollTriggerProxy /> */}
 					<Header>
 						<MenuButton text='menu' />
 						<Navigation />
 					</Header>
 					{children}
-				</LocomotiveScroll>
+				</LocoScroll>
 			</body>
 		</html>
 	);
