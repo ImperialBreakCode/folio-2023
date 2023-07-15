@@ -22,7 +22,6 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={DMSans.className}>
 				<LocoScroll>
-					{/* <ScrollTriggerProxy /> */}
 					<Header>
 						<MenuButton text='menu' />
 						<Navigation />

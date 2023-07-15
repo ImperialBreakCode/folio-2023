@@ -3,16 +3,17 @@
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
 import { ReactNode, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { gsap, Circ } from 'gsap';
+import InitAnimations from '@/utils/gsapAnimations';
+gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
 	children: ReactNode;
 };
 
 const LocoScroll = ({ children }: Props) => {
-	const containerRef = useRef<HTMLDivElement>(null);
 
-	gsap.registerPlugin(ScrollTrigger);
+	const containerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 
@@ -20,7 +21,7 @@ const LocoScroll = ({ children }: Props) => {
 
 		const scroll = new LocomotiveScroll({
 			el: element,
-			//smooth: true,
+			smooth: true,
 			//multiplier: 1
 		});
 
@@ -48,14 +49,19 @@ const LocoScroll = ({ children }: Props) => {
 		ScrollTrigger.addEventListener('refresh', () => {scroll.update()});
 		ScrollTrigger.refresh();
 
+		let ctx = gsap.context(() => {
+			InitAnimations(containerRef.current)
+		}, containerRef);
+
 		return () => {
+			ctx.revert();
 			scroll.destroy();
 		};
 
 	}, []);
 
 	return (
-		<div id='app-scroller' data-scroll-container ref={containerRef}>
+		<div data-scroll-container ref={containerRef}>
 			{children}
 		</div>
 	);
