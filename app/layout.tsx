@@ -21,9 +21,10 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={DMSans.className}>
+				<MenuButton id='menu-desktop' smallScreens={false} text='menu' />
 				<LocoScroll>
 					<Header>
-						<MenuButton text='menu' />
+						<MenuButton id='menu-mobile' smallScreens={true} text='menu' />
 						<Navigation />
 					</Header>
 					{children}

@@ -5,6 +5,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { ReactNode, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import InitAnimations from '@/utils/gsapAnimations';
+import ScrollProgress from '@/utils/scrollProgress';
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
@@ -30,6 +31,7 @@ const LocoScroll = ({ children }: Props) => {
 			});
 
 			scroll.on('scroll', ScrollTrigger.update);
+			scroll.on('scroll', ScrollProgress);
 
 			// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
 			ScrollTrigger.scrollerProxy(element, {
@@ -74,7 +76,7 @@ const LocoScroll = ({ children }: Props) => {
 	}, []);
 
 	return (
-		<div data-scroll-container ref={containerRef}>
+		<div id='loco-scroll' data-scroll-container ref={containerRef}>
 			{children}
 		</div>
 	);

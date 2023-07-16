@@ -1,6 +1,8 @@
 import { gsap, Circ } from "gsap";
 
-export default function InitAnimations(el: HTMLDivElement | null) : void{
+export default function InitAnimations(el: HTMLDivElement | null){
+
+    // about me keft section appearing and dissapearing
     gsap.from('#about-me-left-sec', {
         scrollTrigger: {
             trigger: '#about-me-left-sec',
