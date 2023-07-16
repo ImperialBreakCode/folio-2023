@@ -19,6 +19,9 @@ main {
 }
 
 .menu-button {
+
+	mix-blend-mode: difference;
+
 	.on-hover-bg {
 		background-color: #d4d4d4;
 		clip-path: ellipse(30% 0% at 50% 100%);

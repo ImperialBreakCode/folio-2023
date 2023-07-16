@@ -1,5 +1,3 @@
-'use client';
-
 import { Canvas, RootState, extend, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { Mesh, SphereGeometry } from 'three';
