@@ -26,16 +26,16 @@ export default function Home() {
 			</section>
 
 			<section className='mt-10'>
-				<div className='py-10 flex flex-row'>
-					<div className='w-[34%] pe-[4%]'>
+				<div className='px-[5%] lg:px-0 py-10 flex flex-row'>
+					<div className='hidden lg:block w-[34%] pe-[4%]'>
 						<AboutMeLeftSide/>
 					</div>
-					<div className='w-[7%] pt-2'>
+					<div className='hidden md:block px-[2.5%] w-[15%] lg:px-0 lg:w-[7%] pt-2'>
 						<p className='uppercase text-[#acacac]'>about me</p>
 					</div>
-					<div className='w-[55%]'>
+					<div className='md:w-[80%] lg:w-[55%]'>
 						<p
-							className={`text-[#b6b6b6] text-4xl w-5/6 leading-[3rem] ${styles.aboutMeText}`}
+							className={`text-[#b6b6b6] text-2xl sm:text-4xl leading-[2rem] text-center sm:text-left sm:leading-[3rem] lg:w-5/6 ${styles.aboutMeText}`}
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Vestibulum vel diam auctor, fermentum quam
