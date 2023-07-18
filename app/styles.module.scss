@@ -7,6 +7,22 @@
 	}
 }
 
+.worksPanelStyles{
+	background-color: $main-light;
+
+	h3, h4, p{
+		color: black;
+	}
+
+	div:nth-child(2){
+		height: calc(85vh - 9rem);
+	}
+
+	div:nth-child(3){
+		height: 15vh;
+	}
+}
+
 // .flow-text span, .flow-text i{
 // 	color: $main-medium;
 // }

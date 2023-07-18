@@ -19,8 +19,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
-			<body className={DMSans.className}>
+		<html lang='en' className={DMSans.className}>
+			<body>
 				<MenuButton id='menu-desktop' smallScreens={false} text='menu' />
 				<LocoScroll>
 					<Header>
