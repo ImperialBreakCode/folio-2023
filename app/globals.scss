@@ -40,6 +40,12 @@ main {
 	}
 }
 
+@media (min-width: 1920px){
+	.menu-button{
+		padding: 14px 115px!important;
+	}
+}
+
 @layer components {
 	.nav-btn {
 		@apply mx-[10px] text-[#949494] uppercase transition-colors

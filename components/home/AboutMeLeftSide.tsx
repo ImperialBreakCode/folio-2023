@@ -6,9 +6,11 @@ import LeftSphere from './LeftSphere';
 const AboutMeLeftSide = () => {
 
 	return (
-		<div id='about-me-left-sec' className='flex items-center flex-col'>
-			<LeftSphere />
-			<RedirectBtn>More about me</RedirectBtn>
+		<div data-scroll data-scroll-sticky data-scroll-target='#about-me-sec'>
+			<div id='about-me-left-sec' className='flex items-center flex-col'>
+				<LeftSphere />
+				<RedirectBtn>More about me</RedirectBtn>
+			</div>
 		</div>
 	);
 };
