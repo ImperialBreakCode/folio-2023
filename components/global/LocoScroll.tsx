@@ -26,7 +26,7 @@ const LocoScroll = ({ children }: Props) => {
 
 			scroll = new locomotiveModule.default({
 				el: element,
-				smooth: true,
+				//smooth: true,
 				tablet: {
 					breakpoint: 0,
 					smooth: true,

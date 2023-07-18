@@ -4,6 +4,7 @@ import MobileHeading from '@/components/home/MobileHeading';
 import AboutMeLeftSide from '@/components/home/AboutMeLeftSide';
 
 import styles from './styles.module.scss';
+import WorksShowcase from '@/components/home/WorksShowcase';
 
 export default function Home() {
 	return (
@@ -25,7 +26,7 @@ export default function Home() {
 				</FlowingHeadingText>
 			</section>
 
-			<section id='about-me-sec' className='mt-10'>
+			<section id='about-me-sec' className='mt-10 mb-12'>
 				<div className='px-[5%] lg:px-0 py-10 flex flex-row'>
 					<div className='hidden lg:block w-[34%] pe-[4%]'>
 						<AboutMeLeftSide/>
@@ -56,6 +57,12 @@ export default function Home() {
 							malesuada fames ac ante ipsum primis in faucibus.
 						</p>
 					</div>
+				</div>
+			</section>
+
+			<section>
+				<div className='h-[100vh]'>
+					<WorksShowcase className={styles.worksPanelStyles}/>
 				</div>
 			</section>
 		</main>

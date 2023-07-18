@@ -13,8 +13,8 @@ const MenuButton = ({ text, smallScreens, id, ...args }: MenuBtnProps) => {
 			className={`group/menu-btn menu-button
 			rounded-full border-[#cfcfcf92] border-[1px]
 			overflow-hidden transition-all duration-500
-			mb-[40px] mt-[40px] py-[10px] px-[20%] md:py-[14px] md:px-[6%] md:ms-auto
-			${smallScreens ? 'md:hidden relative' : 'hidden md:inline fixed top-14 right-10 z-[1000]'}`}
+			py-[10px] px-[20%] md:py-[14px] md:px-[6%] md:ms-auto
+			${smallScreens ? 'md:hidden relative my-[40px]' : 'hidden md:inline fixed top-8 right-10 z-[1000]'}`}
 			{...args}
 		>
 			<span className='on-hover-bg absolute left-0 top-0 w-full h-full hidden sm:inline'></span>

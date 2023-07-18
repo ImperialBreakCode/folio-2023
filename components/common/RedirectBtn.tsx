@@ -7,14 +7,16 @@ type BtnProps = {
 
 const RedirectBtn = ({ children }: BtnProps) => {
 	return (
-		<Link
-			className='text-[1.5rem] underline
+		<div>
+			<Link
+				className='text-[1.5rem] underline
 			hover:bg-white hover:text-black hover:px-4 hover:font-medium
 			transition-all duration-200'
-			href='#'
-		>
-			{children} →
-		</Link>
+				href='#'
+			>
+				{children} →
+			</Link>
+		</div>
 	);
 };
 
