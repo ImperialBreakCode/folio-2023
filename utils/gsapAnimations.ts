@@ -28,4 +28,16 @@ export default function InitAnimations(el: HTMLDivElement | null){
         },
         scale: 0.5
     });
+
+    gsap.to('#works-slider', {
+        scrollTrigger: {
+            trigger: '#slider-trigger',
+            scroller: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            //markers: true,
+            scrub: true,
+        },
+        x: '-77%'
+    });
 }

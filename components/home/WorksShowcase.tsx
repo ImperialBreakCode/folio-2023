@@ -3,6 +3,7 @@ import RedirectBtn from '../common/RedirectBtn';
 import Image, { StaticImageData } from 'next/image';
 import img1 from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infinity.png';
+import img3 from '@/public/home/infi2.png';
 
 type WorksProps = {
 	className: string;
@@ -22,7 +23,7 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</h3>
 			</div>
 			<div className='flex flex-row'>
-				<div className='w-1/3 pe-28 pt-12'>
+				<div className='w-1/3 pe-28 pt-12 border-r-[1px] border-r-black mb-8'>
 					<h4 className={`text-8xl mb-8 ${DMSans.className} italic`}>
 						Solaris
 					</h4>
@@ -33,9 +34,10 @@ const WorksShowcase = ({ className }: WorksProps) => {
 					</p>
 				</div>
 				<div className='overflow-hidden'>
-					<div className='flex flex-row items-center h-full min-w-[100vw]'>
+					<div id='works-slider' className='flex flex-row items-center h-full min-w-[135vw]'>
 						<ImageContainer src={img1} alt='solaris' />
 						<ImageContainer src={img2} alt='infinity' />
+                        <ImageContainer src={img3} alt='lightsaber' />
 					</div>
 				</div>
 			</div>
