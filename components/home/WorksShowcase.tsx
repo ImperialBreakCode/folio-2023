@@ -1,4 +1,8 @@
 import { CormorantGaramond, DMSans } from '@/app/fonts';
+import RedirectBtn from '../common/RedirectBtn';
+import Image, { StaticImageData } from 'next/image';
+import img1 from '@/public/home/site_solaris2.png';
+import img2 from '@/public/home/infinity.png';
 
 type WorksProps = {
 	className: string;
@@ -6,8 +10,8 @@ type WorksProps = {
 
 const WorksShowcase = ({ className }: WorksProps) => {
 	return (
-		<div className={`h-full ${className}`}>
-			<div className='py-12 px-32'>
+		<div className={`h-full ps-32 ${className}`}>
+			<div className='py-12'>
 				<h3
 					className={`text-5xl font-semibold ${CormorantGaramond.className}`}
 				>
@@ -15,25 +19,44 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</h3>
 			</div>
 			<div className='flex flex-row'>
-				<div className='w-1/3 px-28 pt-12'>
-					<h4 className={`text-8xl italic ${DMSans.className}`}>Solaris</h4>
-					<p>
+				<div className='w-1/3 pe-28 pt-12'>
+					<h4 className={`text-8xl mb-8 italic ${DMSans.className}`}>
+						Solaris
+					</h4>
+					<p className='pe-10 ps-3 text-xl'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
 						um dictum diam.
 					</p>
 				</div>
-				<div className='w-2/3'>
-					<p>img</p>
-					<p>img</p>
-					<p>img</p>
-					<p>img</p>
-					<p>img</p>
+				<div className='overflow-hidden'>
+					<div className='flex flex-row items-center h-full min-w-[100vw]'>
+                        <ImageContainer src={img1} alt='solaris'/>
+                        <ImageContainer src={img2} alt='infinity'/>
+                    </div>
 				</div>
 			</div>
 			<div>
-				<p>footer</p>
+				<RedirectBtn className='text-black'>
+					More <i className='text-black'>detail</i> about my projects
+				</RedirectBtn>
 			</div>
+		</div>
+	);
+};
+
+
+type ImgContProps = {
+    src: StaticImageData | string;
+    alt: string;
+}
+
+const ImageContainer = ({src, alt} : ImgContProps) => {
+	return (
+		<div className='w-[45vw] h-full flex items-center justify-center'>
+            <div className='w-[85%]'>
+                <Image src={src} alt={alt} />
+            </div>
 		</div>
 	);
 };
