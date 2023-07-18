@@ -10,7 +10,10 @@ type WorksProps = {
 
 const WorksShowcase = ({ className }: WorksProps) => {
 	return (
-		<div className={`h-full ps-32 ${className}`}>
+		<div
+            id='works-showcase'
+			className={`h-[100vh] ps-32 ${className}`}
+		>
 			<div className='py-12'>
 				<h3
 					className={`text-5xl font-semibold ${CormorantGaramond.className}`}
@@ -20,7 +23,7 @@ const WorksShowcase = ({ className }: WorksProps) => {
 			</div>
 			<div className='flex flex-row'>
 				<div className='w-1/3 pe-28 pt-12'>
-					<h4 className={`text-8xl mb-8 italic ${DMSans.className}`}>
+					<h4 className={`text-8xl mb-8 ${DMSans.className} italic`}>
 						Solaris
 					</h4>
 					<p className='pe-10 ps-3 text-xl'>
@@ -31,9 +34,9 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</div>
 				<div className='overflow-hidden'>
 					<div className='flex flex-row items-center h-full min-w-[100vw]'>
-                        <ImageContainer src={img1} alt='solaris'/>
-                        <ImageContainer src={img2} alt='infinity'/>
-                    </div>
+						<ImageContainer src={img1} alt='solaris' />
+						<ImageContainer src={img2} alt='infinity' />
+					</div>
 				</div>
 			</div>
 			<div>
@@ -45,18 +48,17 @@ const WorksShowcase = ({ className }: WorksProps) => {
 	);
 };
 
-
 type ImgContProps = {
-    src: StaticImageData | string;
-    alt: string;
-}
+	src: StaticImageData | string;
+	alt: string;
+};
 
-const ImageContainer = ({src, alt} : ImgContProps) => {
+const ImageContainer = ({ src, alt }: ImgContProps) => {
 	return (
 		<div className='w-[45vw] h-full flex items-center justify-center'>
-            <div className='w-[85%]'>
-                <Image src={src} alt={alt} />
-            </div>
+			<div className='w-[85%]'>
+				<Image src={src} alt={alt} />
+			</div>
 		</div>
 	);
 };

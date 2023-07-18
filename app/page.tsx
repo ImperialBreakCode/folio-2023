@@ -29,7 +29,7 @@ export default function Home() {
 			<section id='about-me-sec' className='mt-10 mb-12'>
 				<div className='px-[5%] lg:px-0 py-10 flex flex-row'>
 					<div className='hidden lg:block w-[34%] pe-[4%]'>
-						<AboutMeLeftSide/>
+						<AboutMeLeftSide />
 					</div>
 					<div className='hidden md:block px-[2.5%] w-[15%] lg:px-0 lg:w-[7%] pt-2'>
 						<p className='uppercase text-[#acacac]'>about me</p>
@@ -49,21 +49,27 @@ export default function Home() {
 							vehicula. Proin pretium, enim id dapibus pharetra,
 							magna ex aliquet eros, sed tincidunt ipsum quam sed
 							velit. Integer consectetur diam sit amet quam
-							consequat commodo.
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Vestibulum vel diam auctor, fermentum quam
-							nec, mollis enim. Nulla condimentum leo at arcu
-							commodo, ac tempor ligula porta. Interdum et
-							malesuada fames ac ante ipsum primis in faucibus.
+							consequat commodo. Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Vestibulum vel diam
+							auctor, fermentum quam nec, mollis enim. Nulla
+							condimentum leo at arcu commodo, ac tempor ligula
+							porta. Interdum et malesuada fames ac ante ipsum
+							primis in faucibus.
 						</p>
 					</div>
 				</div>
 			</section>
 
-			<section>
-				<div className='h-[100vh]'>
-					<WorksShowcase className={styles.worksPanelStyles}/>
+			<section id='works-section'>
+				<div
+					data-scroll
+					data-scroll-sticky
+					data-scroll-target='#works-section'
+					className='h-[60vh]'
+				>
+					<WorksShowcase className={styles.worksPanelStyles} />
 				</div>
+				<div id='showcase-trigger' className='h-[65vh]'></div>
 			</section>
 		</main>
 	);

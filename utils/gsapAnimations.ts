@@ -16,4 +16,16 @@ export default function InitAnimations(el: HTMLDivElement | null){
         duration: 1,
         x: -(document.querySelector('#about-me-left-sec')?.clientWidth ?? 0),
     });
+
+    gsap.from('#works-showcase', {
+        scrollTrigger: {
+            trigger: '#showcase-trigger',
+            scroller: el,
+            start: 'top 80%',
+            end: 'top 45%',
+            //markers: true,
+            scrub: 2,
+        },
+        scale: 0.5
+    });
 }
