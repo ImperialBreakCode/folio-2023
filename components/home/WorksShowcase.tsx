@@ -21,18 +21,18 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</h3>
 			</div>
 			<div className='flex flex-row'>
-				<div id='project-descr-holder' className='w-1/3 border-r-[1px] border-r-black mb-8 relative'>
-					<ProjectDescription id='pr1' title='Solaris'>
+				<div id='project-descr-holder' className='w-[50%] border-r-[1px] border-r-black mb-8 relative'>
+					<ProjectDescription first={true} id='pr1' title='Solaris'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
 						um dictum diam.
 					</ProjectDescription>
-					<ProjectDescription id='pr2' title='Infinity Web'>
+					<ProjectDescription first={false} titleStyle='text-7xl' id='pr2' title='Infinity Web'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
 						um dictum diam.
 					</ProjectDescription>
-					<ProjectDescription id='pr3' title='Lightsaber'>
+					<ProjectDescription first={false} titleStyle='text-6xl' id='pr3' title='Lightsaber'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
 						um dictum diam.
@@ -44,7 +44,7 @@ const WorksShowcase = ({ className }: WorksProps) => {
 						className='flex flex-row items-center h-full min-w-[135vw]'
 					>
 						<ImageContainer id='img1' src={img1} alt='solaris' />
-						<ImageContainer id='img2' src={img2} alt='infinity' />
+						<ImageContainer id='img2' src={img2} alt='infinity web' />
 						<ImageContainer id='img3' src={img3} alt='lightsaber' />
 					</div>
 				</div>
@@ -78,12 +78,14 @@ type ProjectDescriptionProps = {
 	title: string;
 	children: ReactNode;
 	id: string;
+	titleStyle?: string;
+	first: boolean;
 };
 
-const ProjectDescription = ({ title, children, id }: ProjectDescriptionProps) => {
+const ProjectDescription = ({ title, children, id, titleStyle, first }: ProjectDescriptionProps) => {
 	return (
-		<div id={id} className='top-0 left-0 h-full pe-28 pt-12 d-none'>
-			<h4 className={`text-8xl mb-8 italic`}>
+		<div style={{display: first ? 'block' : ''}} id={id} className='pe-20 pt-12 hidden transition-all duration-200'>
+			<h4 className={`text-8xl mb-8 italic ${titleStyle}`}>
 				{title}
 			</h4>
 			<p className='pe-10 ps-3 text-xl'>{children}</p>

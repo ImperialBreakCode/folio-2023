@@ -4,7 +4,6 @@ export default function ScrollProgress(e: OnScrollEvent){
 
     MenuScrollAction(e);
     HorizontalWorksScroll(e);
-    ProjectDescription(e);
 }
 
 function MenuScrollAction(e: OnScrollEvent){
@@ -28,32 +27,40 @@ function HorizontalWorksScroll(e: OnScrollEvent){
     if(typeof e.currentElements[scrollId] === 'object') {
         let progress = e.currentElements[scrollId].progress;
 
-        const img = document.getElementById('img1') as HTMLElement;
-        const img2 = document.getElementById('img2') as HTMLElement;
-        const img3 = document.getElementById('img3') as HTMLElement;
+        const images : HTMLElement[] = [];
+        const descriptions: HTMLElement[] = [];
 
-        ClearImageTrasnformStyles([img, img2, img3]);
+        for (let i = 1; i <= 3; i++) {
+            const img = document.getElementById(`img${i}`) as HTMLElement;
+            const descr = document.getElementById(`pr${i}`) as HTMLElement;
+
+            images.push(img);
+            descriptions.push(descr);
+        }
+
+        ClearStyles(images, descriptions);
 
         if (progress < 0.1) {
-            img.style.transform = 'scale(1.25)';
+            ApplyStylesForElement(0, images, descriptions);
         }
         else if(progress < 0.4){
-            img2.style.transform = 'scale(1.25)';
+            ApplyStylesForElement(1, images, descriptions);
         }
         else{
-            img3.style.transform = 'scale(1.25)';
+            ApplyStylesForElement(2, images, descriptions);
         }
     }
 }
 
-function ProjectDescription(e: OnScrollEvent){
-
-    
+function ApplyStylesForElement(i: number, images: HTMLElement[], descriptions: HTMLElement[]){
+    images[i].style.transform = 'scale(1.25)';
+    descriptions[i].style.display = 'block';
 }
 
-function ClearImageTrasnformStyles(elements : HTMLElement[]){
+function ClearStyles(images : HTMLElement[], descriptions: HTMLElement[]){
 
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].style.transform = '';
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.transform = '';
+        descriptions[i].style.display = '';
     }
 }
