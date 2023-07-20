@@ -1,9 +1,10 @@
-import { CormorantGaramond, DMSans } from '@/app/fonts';
+import { CormorantGaramond } from '@/app/fonts';
 import RedirectBtn from '../common/RedirectBtn';
 import Image, { StaticImageData } from 'next/image';
 import img1 from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infinity.png';
 import img3 from '@/public/home/infi2.png';
+import { ReactNode } from 'react';
 
 type WorksProps = {
 	className: string;
@@ -11,10 +12,7 @@ type WorksProps = {
 
 const WorksShowcase = ({ className }: WorksProps) => {
 	return (
-		<div
-            id='works-showcase'
-			className={`h-[100vh] ps-32 ${className}`}
-		>
+		<div id='works-showcase' className={`h-[100vh] ps-32 ${className}`}>
 			<div className='py-12'>
 				<h3
 					className={`text-5xl font-semibold ${CormorantGaramond.className}`}
@@ -23,21 +21,31 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</h3>
 			</div>
 			<div className='flex flex-row'>
-				<div className='w-1/3 pe-28 pt-12 border-r-[1px] border-r-black mb-8'>
-					<h4 className={`text-8xl mb-8 ${DMSans.className} italic`}>
-						Solaris
-					</h4>
-					<p className='pe-10 ps-3 text-xl'>
+				<div id='project-descr-holder' className='w-1/3 border-r-[1px] border-r-black mb-8 relative'>
+					<ProjectDescription id='pr1' title='Solaris'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
 						um dictum diam.
-					</p>
+					</ProjectDescription>
+					<ProjectDescription id='pr2' title='Infinity Web'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Quisque ex velit, posuere vitae erat sit amet, condiment
+						um dictum diam.
+					</ProjectDescription>
+					<ProjectDescription id='pr3' title='Lightsaber'>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Quisque ex velit, posuere vitae erat sit amet, condiment
+						um dictum diam.
+					</ProjectDescription>
 				</div>
 				<div className='overflow-hidden'>
-					<div id='works-slider' className='flex flex-row items-center h-full min-w-[135vw]'>
-						<ImageContainer src={img1} alt='solaris' />
-						<ImageContainer src={img2} alt='infinity' />
-                        <ImageContainer src={img3} alt='lightsaber' />
+					<div
+						id='works-slider'
+						className='flex flex-row items-center h-full min-w-[135vw]'
+					>
+						<ImageContainer id='img1' src={img1} alt='solaris' />
+						<ImageContainer id='img2' src={img2} alt='infinity' />
+						<ImageContainer id='img3' src={img3} alt='lightsaber' />
 					</div>
 				</div>
 			</div>
@@ -53,14 +61,32 @@ const WorksShowcase = ({ className }: WorksProps) => {
 type ImgContProps = {
 	src: StaticImageData | string;
 	alt: string;
+	id: string;
 };
 
-const ImageContainer = ({ src, alt }: ImgContProps) => {
+const ImageContainer = ({ src, alt, id }: ImgContProps) => {
 	return (
 		<div className='w-[45vw] h-full flex items-center justify-center'>
-			<div className='w-[85%]'>
+			<div id={id} className='w-[70%] transition-transform duration-500'>
 				<Image src={src} alt={alt} />
 			</div>
+		</div>
+	);
+};
+
+type ProjectDescriptionProps = {
+	title: string;
+	children: ReactNode;
+	id: string;
+};
+
+const ProjectDescription = ({ title, children, id }: ProjectDescriptionProps) => {
+	return (
+		<div id={id} className='top-0 left-0 h-full pe-28 pt-12 d-none'>
+			<h4 className={`text-8xl mb-8 italic`}>
+				{title}
+			</h4>
+			<p className='pe-10 ps-3 text-xl'>{children}</p>
 		</div>
 	);
 };

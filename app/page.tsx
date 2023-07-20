@@ -70,7 +70,7 @@ export default function Home() {
 					<WorksShowcase className={styles.worksPanelStyles} />
 				</div>
 				<div id='showcase-trigger' className='h-[65vh]'></div>
-				<div id='slider-trigger' className='h-[150vh]'></div>
+				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[150vh]'></div>
 			</section>
 		</main>
 	);
