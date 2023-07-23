@@ -60,7 +60,7 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id='works-section'>
+			<section id='works-section' className='hidden lg:block'>
 				<div
 					data-scroll
 					data-scroll-sticky
@@ -69,7 +69,7 @@ export default function Home() {
 				>
 					<WorksShowcase className={styles.worksPanelStyles} />
 				</div>
-				<div id='showcase-trigger' className='h-[65vh]'></div>
+				<div id='showcase-trigger' className='h-[65vh] mt-12'></div>
 				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[150vh]'></div>
 			</section>
 		</main>
