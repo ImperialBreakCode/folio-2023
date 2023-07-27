@@ -2,9 +2,16 @@ import FlowingHeadingText from '@/components/home/FlowingHeadingText';
 import NameHeading from '@/components/home/NameHeading';
 import MobileHeading from '@/components/home/MobileHeading';
 import AboutMeLeftSide from '@/components/home/AboutMeLeftSide';
+import ProjectMobile from '@/components/home/ProjectMobile';
+import WorksShowcase from '@/components/home/WorksShowcase';
 
 import styles from './styles.module.scss';
-import WorksShowcase from '@/components/home/WorksShowcase';
+import { CormorantGaramond } from './fonts';
+
+import img from '@/public/home/site_solaris2.png';
+import img2 from '@/public/home/infi2.png';
+import img3 from '@/public/home/infinity.png';
+
 
 export default function Home() {
 	return (
@@ -71,6 +78,31 @@ export default function Home() {
 				</div>
 				<div id='showcase-trigger' className='h-[65vh] mt-12'></div>
 				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[150vh]'></div>
+			</section>
+
+			<section className={`lg:hidden ${styles.worksSectionMobile}`}>
+				<h3 className={`text-center text-5xl font-bold my-5 ${CormorantGaramond.className}`}>
+					Works
+				</h3>
+
+				<ProjectMobile i={1} src={img} title='Solaris'>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Quisque ex velit, posuere vitae erat sit amet, condiment
+					um dictum diam.
+				</ProjectMobile>
+
+				<ProjectMobile i={2} src={img2} title='Lightsaber'>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Quisque ex velit, posuere vitae erat sit amet, condiment
+					um dictum diam.
+				</ProjectMobile>
+
+				<ProjectMobile i={3} src={img3} title='Infinity Web'>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Quisque ex velit, posuere vitae erat sit amet, condiment
+					um dictum diam.
+				</ProjectMobile>
+
 			</section>
 		</main>
 	);

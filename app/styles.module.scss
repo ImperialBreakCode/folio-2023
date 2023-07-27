@@ -46,9 +46,14 @@
 	}
 }
 
-// .flow-text span, .flow-text i{
-// 	color: $main-medium;
-// }
+.worksSectionMobile{
+	background-color: $main-light;
+	padding: 20px;
+
+	h3, h4, p{
+		color: black;
+	}
+}
 
 @media (max-width: 640px){
 	.headingName{
