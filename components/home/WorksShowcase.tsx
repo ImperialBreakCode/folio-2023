@@ -21,7 +21,7 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</h3>
 			</div>
 			<div className='flex flex-row'>
-				<div id='project-descr-holder' className='w-[50%] border-r-[1px] border-r-black mb-8 relative'>
+				<div id='project-descr-holder' className='w-[60%] 2xl:w-[50%] border-r-[1px] border-r-black mb-[7vh] relative flex lg:block flex-col justify-center'>
 					<ProjectDescription first={true} id='pr1' title='Solaris'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Quisque ex velit, posuere vitae erat sit amet, condiment
@@ -84,11 +84,11 @@ type ProjectDescriptionProps = {
 
 const ProjectDescription = ({ title, children, id, titleStyle, first }: ProjectDescriptionProps) => {
 	return (
-		<div style={{display: first ? 'block' : ''}} id={id} className='pe-20 pt-12 hidden transition-all duration-200'>
-			<h4 className={`text-8xl mb-8 italic ${titleStyle}`}>
+		<div style={{display: first ? 'block' : ''}} id={id} className='pe-10 xl:pe-20 pt-12 hidden transition-all duration-200'>
+			<h4 className={`${titleStyle ?? 'text-8xl'} mb-8 italic`}>
 				{title}
 			</h4>
-			<p className='pe-10 ps-3 text-xl'>{children}</p>
+			<p className='xl:pe-10 xl:ps-3 text-xl'>{children}</p>
 		</div>
 	);
 };
