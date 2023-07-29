@@ -34,10 +34,10 @@ export default function InitAnimations(el: HTMLDivElement | null){
             trigger: '#slider-trigger',
             scroller: el,
             start: 'top bottom',
-            end: 'bottom top',
+            end: 'bottom bottom',
             //markers: true,
             scrub: true,
         },
-        x: '-77%'
+        x: '-65%'
     });
 }

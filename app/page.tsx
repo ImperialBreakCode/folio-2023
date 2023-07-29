@@ -67,17 +67,17 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section id='works-section' className='hidden lg:block'>
+			<section id='works-section' className='hidden lg:block relative'>
 				<div
 					data-scroll
 					data-scroll-sticky
 					data-scroll-target='#works-section'
-					className='h-[60vh]'
+					className='h-[100vh]'
 				>
 					<WorksShowcase className={styles.worksPanelStyles} />
 				</div>
-				<div id='showcase-trigger' className='h-[65vh] mt-12'></div>
-				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[150vh]'></div>
+				<div id='showcase-trigger' className='h-[65vh] absolute top-[60vh]'></div>
+				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[160vh] mt-[30vh]'></div>
 			</section>
 
 			<section className={`lg:hidden ${styles.worksSectionMobile}`}>
@@ -102,6 +102,10 @@ export default function Home() {
 					Quisque ex velit, posuere vitae erat sit amet, condiment
 					um dictum diam.
 				</ProjectMobile>
+
+			</section>
+
+			<section className={`h-[100vh] ${styles.contactSection}`}>
 
 			</section>
 		</main>
