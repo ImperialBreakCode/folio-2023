@@ -1,4 +1,4 @@
-import FlowingHeadingText from '@/components/home/FlowingHeadingText';
+import FlowingText from '@/components/home/FlowingText';
 import NameHeading from '@/components/home/NameHeading';
 import MobileHeading from '@/components/home/MobileHeading';
 import AboutMeLeftSide from '@/components/home/AboutMeLeftSide';
@@ -11,7 +11,6 @@ import { CormorantGaramond } from './fonts';
 import img from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infi2.png';
 import img3 from '@/public/home/infinity.png';
-
 
 export default function Home() {
 	return (
@@ -28,9 +27,9 @@ export default function Home() {
 					lastName='Petrov'
 				/>
 
-				<FlowingHeadingText className={styles.flowText}>
+				<FlowingText heading className={styles.flowText}>
 					<i>Software</i> engineer student →&#160;
-				</FlowingHeadingText>
+				</FlowingText>
 			</section>
 
 			<section id='about-me-sec' className='mt-10 mb-12'>
@@ -76,36 +75,69 @@ export default function Home() {
 				>
 					<WorksShowcase className={styles.worksPanelStyles} />
 				</div>
-				<div id='showcase-trigger' className='h-[65vh] absolute top-[60vh]'></div>
-				<div data-scroll data-scroll-id="projects-horizontal" id='slider-trigger' className='h-[160vh] mt-[30vh]'></div>
+				<div
+					id='showcase-trigger'
+					className='h-[65vh] absolute top-[60vh]'
+				></div>
+				<div
+					data-scroll
+					data-scroll-id='projects-horizontal'
+					id='slider-trigger'
+					className='h-[160vh] mt-[30vh]'
+				></div>
 			</section>
 
 			<section className={`lg:hidden ${styles.worksSectionMobile}`}>
-				<h3 className={`text-center text-5xl font-bold my-5 ${CormorantGaramond.className}`}>
+				<h3
+					className={`text-center text-5xl font-bold my-5 ${CormorantGaramond.className}`}
+				>
 					Works
 				</h3>
 
 				<ProjectMobile i={1} src={img} title='Solaris'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Quisque ex velit, posuere vitae erat sit amet, condiment
-					um dictum diam.
+					Quisque ex velit, posuere vitae erat sit amet, condiment um
+					dictum diam.
 				</ProjectMobile>
 
 				<ProjectMobile i={2} src={img2} title='Lightsaber'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Quisque ex velit, posuere vitae erat sit amet, condiment
-					um dictum diam.
+					Quisque ex velit, posuere vitae erat sit amet, condiment um
+					dictum diam.
 				</ProjectMobile>
 
 				<ProjectMobile i={3} src={img3} title='Infinity Web'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Quisque ex velit, posuere vitae erat sit amet, condiment
-					um dictum diam.
+					Quisque ex velit, posuere vitae erat sit amet, condiment um
+					dictum diam.
 				</ProjectMobile>
-
 			</section>
 
 			<section className={`h-[100vh] ${styles.contactSection}`}>
+				<div className='pt-20 ps-28'>
+					<p className='uppercase text-[1rem]'>currently based in</p>
+					<p className='text-[2rem]'>
+						Veliko Turnovo <br /> Bulgaria
+					</p>
+				</div>
+
+				<FlowingText normalFlow data-scroll data-scroll-speed={2}>
+					<i className='uppercase text-[black]'>get in touch →&#160;</i>
+				</FlowingText>
+
+				<div className='flex justify-center'>
+					<div className='flex flex-col items-start mt-9'>
+						<div className='flex flex-row items-center'>
+							<p className='uppercase text-[1.5rem] text-[#383838!important]'>email</p>
+							<p className='text-[3.5rem] underline ms-5'>email@gmail.com</p>
+						</div>
+
+						<div className='flex flex-row items-center mt-5'>
+							<p className='uppercase text-[1.5rem] text-[#383838!important]'>number</p>
+							<p className='text-[3.5rem] underline ms-5'>0694205552</p>
+						</div>
+					</div>
+				</div>
 
 			</section>
 		</main>
