@@ -55,6 +55,15 @@
 	}
 }
 
+.contactSection{
+	background-color: #C3BEFF;
+
+	h3, p{
+		color: black;
+	}
+
+}
+
 @media (max-width: 640px){
 	.headingName{
 		justify-content: space-around;
@@ -71,6 +80,35 @@
 	.aboutMeText{
 		font-size: 3.3rem;
 		line-height: 3.5rem;
+	}
+}
+
+@media(min-width: 1700px){
+
+	.contactLocation{
+
+		padding-top: 6rem;
+		padding-left: 11rem;
+
+		p:nth-child(1){
+			font-size: 1.5rem;
+		}
+
+		p:nth-child(2){
+			font-size: 3rem;
+		}
+	}
+
+	.contactInfo div{
+		margin-top: 2.7rem;
+
+		p:nth-child(1){
+			font-size: 2rem;
+		}
+
+		p:nth-child(2){
+			font-size: 5.5rem;
+		}
 	}
 }
 

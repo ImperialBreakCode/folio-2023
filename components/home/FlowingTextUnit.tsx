@@ -1,13 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 type Props = {
 	children: ReactNode;
+	normalFlow?: boolean;
 };
 
-const FlowingTextUnit = ({ children }: Props) => {
+const FlowingTextUnit = ({ children, normalFlow }: Props) => {
 
 	return (
 		<motion.span
@@ -16,8 +17,8 @@ const FlowingTextUnit = ({ children }: Props) => {
 			}}
 			transition={{
 				duration: 10,
-				ease: 'easeInOut',
-				times: [0, 0.3, 1],
+				ease: normalFlow ? 'linear' : 'easeInOut',
+				times: normalFlow ? [1] : [0, 0.3, 1],
 				repeat: Infinity,
 			}}
 		>
