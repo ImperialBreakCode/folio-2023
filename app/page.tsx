@@ -114,31 +114,60 @@ export default function Home() {
 			</section>
 
 			<section className={`h-[100vh] ${styles.contactSection}`}>
-				<div className={`pt-20 ps-28 ${styles.contactLocation}`}>
+				<div
+					className={`hidden md:block pt-20 ps-28 ${styles.contactLocation}`}
+				>
 					<p className='uppercase text-[1rem]'>currently based in</p>
 					<p className='text-[2rem]'>
 						Veliko Turnovo <br /> Bulgaria
 					</p>
 				</div>
 
-				<FlowingText normalFlow data-scroll data-scroll-speed={2} className={styles.flowText}>
-					<i className='uppercase text-[black]'>get in touch →&#160;</i>
+				<div className='block md:hidden h-[10vh]'></div>
+
+				<h3 className='block sm:hidden italic text-center uppercase text-[3rem]'>Get in touch</h3>
+
+				<FlowingText
+					normalFlow
+					data-scroll
+					data-scroll-speed={2}
+					className={`${styles.flowText}`}
+				>
+					<i className='uppercase text-[black]'>
+						get in touch →&#160;
+					</i>
 				</FlowingText>
 
 				<div className={`flex justify-center ${styles.contactInfo}`}>
-					<div className='flex flex-col items-start mt-9'>
-						<div className='flex flex-row items-center'>
-							<p className='uppercase text-[1.5rem] text-[#383838!important]'>email</p>
-							<p className='text-[3.5rem] underline ms-5'>email@gmail.com</p>
+					<div className='flex flex-col items-start mt-[20vh] sm:mt-9'>
+						<div className='sm:flex md:hidden sm:flex-row items-center'>
+							<p className='uppercase text-[1rem] md:text-[1.5rem] text-[#383838!important]'>
+								based in
+							</p>
+							<p className='text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] underline sm:ms-5'>
+								Veliko Tarnovo, Bulgaria
+							</p>
 						</div>
 
-						<div className='flex flex-row items-center mt-5'>
-							<p className='uppercase text-[1.5rem] text-[#383838!important]'>number</p>
-							<p className='text-[3.5rem] underline ms-5'>0694205552</p>
+						<div className='sm:flex flex-row items-center mt-5'>
+							<p className='uppercase text-[1rem] md:text-[1.5rem] text-[#383838!important]'>
+								email
+							</p>
+							<p className='text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] underline sm:ms-5'>
+								email@gmail.com
+							</p>
+						</div>
+
+						<div className='sm:flex flex-row items-center mt-5'>
+							<p className='uppercase text-[1rem] md:text-[1.5rem] text-[#383838!important]'>
+								number
+							</p>
+							<p className='text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] underline sm:ms-5'>
+								0694205552
+							</p>
 						</div>
 					</div>
 				</div>
-
 			</section>
 		</main>
 	);
