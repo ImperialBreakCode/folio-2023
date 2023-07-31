@@ -114,18 +114,18 @@ export default function Home() {
 			</section>
 
 			<section className={`h-[100vh] ${styles.contactSection}`}>
-				<div className='pt-20 ps-28'>
+				<div className={`pt-20 ps-28 ${styles.contactLocation}`}>
 					<p className='uppercase text-[1rem]'>currently based in</p>
 					<p className='text-[2rem]'>
 						Veliko Turnovo <br /> Bulgaria
 					</p>
 				</div>
 
-				<FlowingText normalFlow data-scroll data-scroll-speed={2}>
+				<FlowingText normalFlow data-scroll data-scroll-speed={2} className={styles.flowText}>
 					<i className='uppercase text-[black]'>get in touch →&#160;</i>
 				</FlowingText>
 
-				<div className='flex justify-center'>
+				<div className={`flex justify-center ${styles.contactInfo}`}>
 					<div className='flex flex-col items-start mt-9'>
 						<div className='flex flex-row items-center'>
 							<p className='uppercase text-[1.5rem] text-[#383838!important]'>email</p>

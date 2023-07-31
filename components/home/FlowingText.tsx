@@ -34,7 +34,7 @@ const FlowingText = ({
 					{flowHtml()}
 				</h1>
 				:
-				<h3 className={classStyles} style={{ transform: 'translateX(-100%)' }}>
+				<h3 className={classStyles} style={{ transform: 'translateX(-50%)' }}>
 					{flowHtml()}
 				</h3>
 			}
