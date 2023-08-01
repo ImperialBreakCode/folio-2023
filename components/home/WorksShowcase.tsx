@@ -1,4 +1,4 @@
-import { CormorantGaramond } from '@/app/fonts';
+import { CormorantGaramond, DMSansLocal } from '@/app/fonts';
 import RedirectBtn from '../common/RedirectBtn';
 import Image, { StaticImageData } from 'next/image';
 import img1 from '@/public/home/site_solaris2.png';
@@ -88,7 +88,7 @@ const ProjectDescription = ({ title, children, id, titleStyle, first }: ProjectD
 			<h4 className={`${titleStyle ?? 'text-8xl'} mb-8 italic`}>
 				{title}
 			</h4>
-			<p className='xl:pe-10 xl:ps-3 text-xl'>{children}</p>
+			<p style={DMSansLocal.style} className='xl:pe-10 xl:ps-3 text-xl font-light'>{children}</p>
 		</div>
 	);
 };

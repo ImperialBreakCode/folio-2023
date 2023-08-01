@@ -6,7 +6,7 @@ import ProjectMobile from '@/components/home/ProjectMobile';
 import WorksShowcase from '@/components/home/WorksShowcase';
 
 import styles from './styles.module.scss';
-import { CormorantGaramond } from './fonts';
+import { CormorantGaramond, DMSansItalic, DMSansLocal } from './fonts';
 
 import img from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infi2.png';
@@ -27,8 +27,10 @@ export default function Home() {
 					lastName='Petrov'
 				/>
 
-				<FlowingText heading className={styles.flowText}>
-					<i>Software</i> engineer student →&#160;
+				<FlowingText heading className={`font-light ${styles.flowText}`}>
+					<span className={DMSansLocal.className}>
+						<i className={DMSansItalic.className}>Software</i> engineer student
+					</span>&#160;→&#160;
 				</FlowingText>
 			</section>
 
@@ -38,11 +40,12 @@ export default function Home() {
 						<AboutMeLeftSide />
 					</div>
 					<div className='hidden md:block px-[2.5%] w-[15%] lg:px-0 lg:w-[7%] pt-2'>
-						<p className='uppercase text-[#acacac]'>about me</p>
+						<p className={`uppercase text-[#cecece] font-extralight ${DMSansLocal.className}`}>about me</p>
 					</div>
 					<div className='md:w-[80%] lg:w-[55%]'>
 						<p
-							className={`text-[#b6b6b6] text-2xl sm:text-4xl leading-[2rem] text-center sm:text-left sm:leading-[3rem] lg:w-5/6 ${styles.aboutMeText}`}
+							className={`text-[#b6b6b6] text-2xl sm:text-4xl leading-[2rem] text-center
+							sm:text-left sm:leading-[3rem] lg:w-5/6 font-light ${styles.aboutMeText} ${DMSansLocal.className}`}
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Vestibulum vel diam auctor, fermentum quam
@@ -125,7 +128,9 @@ export default function Home() {
 
 				<div className='block md:hidden h-[10vh]'></div>
 
-				<h3 className='block sm:hidden italic text-center uppercase text-[3rem]'>Get in touch</h3>
+				<h3 style={CormorantGaramond.style} className='block sm:hidden text-center italic uppercase text-[3rem] font-semibold'>
+					Get in touch
+				</h3>
 
 				<FlowingText
 					normalFlow

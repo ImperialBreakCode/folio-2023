@@ -3,7 +3,7 @@ import Header from '@/components/global/Header';
 import Navigation from '@/components/global/Navigation';
 import LocoScroll from '@/components/global/LocoScroll';
 
-import { DMSans } from './fonts';
+import { DMSans, Marathon } from './fonts';
 
 import './globals.scss';
 import '../styles/locomotive.scss';
