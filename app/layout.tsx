@@ -2,11 +2,13 @@ import MenuButton from '@/components/global/MenuButton';
 import Header from '@/components/global/Header';
 import Navigation from '@/components/global/Navigation';
 import LocoScroll from '@/components/global/LocoScroll';
-
-import { DMSans, Marathon } from './fonts';
-
+import ContentContainer from '@/components/global/ContentContainer';
+import FolioMenu from '@/components/global/FolioMenu';
+import ReduxProvider from '@/components/global/ReduxProvider';
+import { DMSans } from './fonts';
 import './globals.scss';
 import '../styles/locomotive.scss';
+
 
 export const metadata = {
 	title: 'Portfolio 2023',
@@ -21,14 +23,27 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={DMSans.className}>
 			<body>
-				<MenuButton id='menu-desktop' smallScreens={false} text='menu' />
-				<LocoScroll>
-					<Header>
-						<MenuButton id='menu-mobile' smallScreens={true} text='menu' />
-						<Navigation />
-					</Header>
-					{children}
-				</LocoScroll>
+				<ReduxProvider>
+					<MenuButton
+						id='menu-desktop'
+						smallScreens={false}
+						text='menu'
+					/>
+					<FolioMenu />
+					<ContentContainer>
+						<LocoScroll>
+							<Header>
+								<MenuButton
+									id='menu-mobile'
+									smallScreens={true}
+									text='menu'
+								/>
+								<Navigation />
+							</Header>
+							{children}
+						</LocoScroll>
+					</ContentContainer>
+				</ReduxProvider>
 			</body>
 		</html>
 	);

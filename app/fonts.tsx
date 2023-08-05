@@ -16,12 +16,6 @@ export const DMSansItalic = localFont({
 	style: 'italic',
 });
 
-export const Marathon = localFont({
-	src: '../fonts/marathon/Marathon.otf',
-	style: 'normal',
-	weight: '400',
-});
-
 export const CormorantGaramond = Cormorant_Garamond({
 	weight: ['300', '600'],
 	style: ['italic', 'normal'],
