@@ -38,6 +38,18 @@ main {
 	}
 }
 
+.folio-menu{
+	background-color: $main-light;
+
+	a, p, h2{
+		color: black;
+	}
+
+	.link-color-block{
+		background-color: $secondary;
+	}
+}
+
 @media (max-width: 767px) {
 	.navigation {
 		display: none;
