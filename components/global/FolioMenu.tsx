@@ -7,6 +7,7 @@ import { Url } from 'next/dist/shared/lib/router/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { TfiClose } from 'react-icons/tfi';
 
 import img from '@/public/home/infi2.png';
 
@@ -19,10 +20,14 @@ const FolioMenu = () => {
 			className={`fixed top-0 left-0 w-[100vw] min-h-[100vh] z-[2000] folio-menu ${DMSansLocal.className}`}
 		>
 
-			<div style={CormorantGaramond.style} className='p-10 px-20 mb-20 flex flex-row justify-between text-3xl italic'>
-				<p> software engineer </p>
-				<p> - porfolio 2023 - </p>
-				<p> software engineer </p>
+			<div style={CormorantGaramond.style} className='px-20 mb-20 flex flex-row justify-between text-3xl italic'>
+				<p className='p-10'> software engineer </p>
+				<p className='p-10'> - porfolio 2023 - </p>
+				<button className='py-5 px-5 hover:px-10 my-5 rounded-full group flex
+				flex-row items-center close-menu-btn transition-all'>
+					<TfiClose/>
+					Back to Page →
+				</button>
 			</div>
 
 

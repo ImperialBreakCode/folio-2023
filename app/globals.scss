@@ -27,7 +27,7 @@ main {
 	mix-blend-mode: difference;
 
 	.on-hover-bg {
-		background-color: #d4d4d4;
+		background-color: $color-white;
 		clip-path: ellipse(30% 0% at 50% 100%);
 		transition: 0.3s clip-path;
 		z-index: -1;
@@ -39,22 +39,26 @@ main {
 }
 
 .folio-menu{
-	background-color: $main-light;
+	background-color: $background-color-light;
 
-	a, p, i{
+	a, p, i, button{
 		color: black;
 	}
 
 	.link-color-block{
-		background-color: $main;
+		background-color: $main-medium;
 	}
 
 	.active-nav-menu{
-		background-color: $secondary-light;
+		background-color: $main-medium;
 
 		span{
-			color: white;
+			color: $color-white;
 		}
+	}
+
+	.close-menu-btn{
+		background: $main-medium;
 	}
 }
 
@@ -73,14 +77,14 @@ main {
 @layer components {
 	.nav-btn {
 		@apply mx-[10px] text-[#949494] uppercase transition-colors
-		duration-[0.3s] hover:text-[#{$secondary-light}]
+		duration-[0.3s] hover:text-[#{$main-medium}]
 		relative
-		after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#{$secondary-light}] after:w-0
+		after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#{$main-medium}] after:w-0
 		after:transition-all after:duration-[0.5sec]
 		after:hover:w-full;
 	}
 
 	.nav-active {
-		@apply text-[#{$secondary-light}];
+		@apply text-[#{$main-medium}];
 	}
 }

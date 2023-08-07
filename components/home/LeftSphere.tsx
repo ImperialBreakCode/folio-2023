@@ -8,7 +8,7 @@ const LeftSphere = () => {
 
     const onCreation = ({camera, gl} : RootState) => {
 
-		gl.setClearColor(0x6720FF);
+		gl.setClearColor(0x8a88ff);
 
         camera.position.y = 1;
         camera.lookAt(0, 0, 0);
