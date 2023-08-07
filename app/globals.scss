@@ -41,12 +41,20 @@ main {
 .folio-menu{
 	background-color: $main-light;
 
-	a, p, h2{
+	a, p, i{
 		color: black;
 	}
 
 	.link-color-block{
-		background-color: $secondary;
+		background-color: $main;
+	}
+
+	.active-nav-menu{
+		background-color: $secondary-light;
+
+		span{
+			color: white;
+		}
 	}
 }
 
