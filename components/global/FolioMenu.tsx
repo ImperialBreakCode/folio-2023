@@ -22,30 +22,37 @@ const FolioMenu = () => {
 		>
 			<div
 				style={CormorantGaramond.style}
-				className='px-20 mb-20 flex flex-row items-center text-3xl italic relative'
+				className='px-10 lg:px-20 mb-5 lg:mb-20 flex flex-col-reverse md:flex-row items-center
+				text-center text-xl md:text-3xl md:italic relative'
 			>
-				<p> 2023 </p>
+				<p>
+					2023 <span className='text-black md:hidden'> Porfolio <br /> Christopher Alexander Petrov</span>
+				</p>
 				<p
 					style={{ transform: 'translate(-50%, -50%)' }}
-					className='absolute top-1/2 left-1/2'
+					className='absolute top-1/2 left-1/2 hidden md:block w-max'
 				>
-					{' '}
-					- Christopher Alexander Petrov -{' '}
+					- Christopher Alexander Petrov -
 				</p>
 				<CloseBtn />
 			</div>
 
-			<div className='flex flex-row'>
-				<div className='w-[60%] px-20'>
-					<MenuLink href={FolioRoutes.Home} text='Home' />
-					<MenuLink href={FolioRoutes.Projects} text='Projects' />
-					<MenuLink href={FolioRoutes.About} text='About me' />
-					<MenuLink href={FolioRoutes.Contact} text='Contact me' />
-				</div>
+			<div className='flex items-center h-[65vh]'>
+				<div className='flex flex-row w-full'>
+					<div className='w-full lg:w-[60%] px-5 sm:px-10 md:px-20'>
+						<MenuLink href={FolioRoutes.Home} text='Home' />
+						<MenuLink href={FolioRoutes.Projects} text='Projects' />
+						<MenuLink href={FolioRoutes.About} text='About me' />
+						<MenuLink
+							href={FolioRoutes.Contact}
+							text='Contact me'
+						/>
+					</div>
 
-				<div className='w-[40%] px-20 flex justify-center items-center'>
-					<div className='img-box'>
-						<Image src={img} alt='image-menu' />
+					<div className='w-[40%] px-20 hidden lg:flex justify-center items-center'>
+						<div className='img-box'>
+							<Image src={img} alt='image-menu' />
+						</div>
 					</div>
 				</div>
 			</div>
@@ -64,13 +71,13 @@ const MenuLink = ({ href, text }: MenuLinkProps) => {
 
 	return (
 		<Link
-			className={`relative px-10 py-8 my-4 group w-full block border-t-[1px] border-black ${
+			className={`relative px-10 py-6 lg:py-8 my-4 group w-full block border-t-[1px] border-black ${
 				isActive ? 'active-nav-menu' : ''
 			}`}
 			href={href}
 		>
 			<span
-				className='relative z-[2001] text-3xl uppercase text-black
+				className='relative z-[2001] text-xl lg:text-3xl uppercase text-black
 			group-hover:text-[white] transition-all flex flex-row items-center'
 			>
 				<span className='w-0 group-hover:w-[2rem] overflow-hidden inline-block transition-all'>
@@ -93,7 +100,7 @@ const CloseBtn = () => {
 	return (
 		<button
 			onClick={() => menuToggle(dispatch)}
-			className='p-10 my-5 rounded-full close-menu-btn group relative border-[1px] border-black ms-auto'
+			className='p-5 md:p-10 my-5 rounded-full close-menu-btn group relative md:border-[1px] border-black md:ms-auto'
 		>
 			<span
 				style={{ transform: 'translate(-50%, -50%)' }}
