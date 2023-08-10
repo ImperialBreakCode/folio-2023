@@ -66,6 +66,10 @@ main {
 	}
 }
 
+.menu-curtain div{
+	background-color: $background-color-light;
+}
+
 @media (max-width: 767px) {
 	.navigation {
 		display: none;

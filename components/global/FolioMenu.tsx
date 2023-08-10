@@ -2,7 +2,6 @@
 
 import { CormorantGaramond, DMSansLocal } from '@/app/fonts';
 import FolioRoutes from '@/routes';
-import { useAppSelector } from '@/state/hooks';
 import Image, { StaticImageData } from 'next/image';
 
 import img from '@/public/home/infi2.png';
@@ -11,8 +10,7 @@ import img3 from '@/public/home/site_solaris2.png';
 
 import CloseBtn from './menuItems/CloseBtn';
 import MenuLink, { MenuLinkHoverEvent } from './menuItems/MenuLink';
-import { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 
 const linkImages : { [name: string]: StaticImageData } = {
@@ -31,13 +29,8 @@ const FolioMenu = () => {
 		setImgSourceState(linkImages[el.id]);
 	}
 
-	const menuIsOpen = useAppSelector((state) => state.menuToggle);
-
 	return (
-		<div
-			style={{ display: menuIsOpen ? '' : 'none' }}
-			className={`fixed top-0 left-0 w-[100vw] min-h-[100vh] z-[2000] folio-menu ${DMSansLocal.className}`}
-		>
+		<div className={`min-h-[100vh] folio-menu ${DMSansLocal.className}`}>
 			<div
 				style={CormorantGaramond.style}
 				className='px-10 lg:px-20 mb-5 lg:mb-20 flex flex-col-reverse md:flex-row items-center
