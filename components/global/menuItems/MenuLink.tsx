@@ -1,5 +1,7 @@
 'use client'
 
+import { toggleMenu } from "@/state/actions";
+import { useAppDispatch } from "@/state/hooks";
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,8 +19,12 @@ const MenuLink = ({ href, text, onMouseEnter, id }: MenuLinkProps) => {
 	const currentPath = usePathname();
 	const isActive = currentPath === href;
 
+	const dispatch = useAppDispatch();
+	const menuToggle = toggleMenu();
+
 	return (
 		<Link
+			onClick={() => menuToggle(dispatch)}
 			id={id}
 			onMouseEnter={(e) => onMouseEnter(e)}
 			className={`relative px-10 py-6 lg:py-8 my-4 group w-full block border-t-[1px] border-black ${

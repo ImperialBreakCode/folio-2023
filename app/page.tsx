@@ -11,10 +11,11 @@ import { CormorantGaramond, DMSansItalic, DMSansLocal } from './fonts';
 import img from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infi2.png';
 import img3 from '@/public/home/infinity.png';
+import PageWrapper from '@/components/common/PageWrapper';
 
 export default function Home() {
 	return (
-		<main data-scroll-section>
+		<PageWrapper>
 			<section>
 				<MobileHeading>
 					Software <br /> engineer <br /> student
@@ -174,6 +175,6 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-		</main>
+		</PageWrapper>
 	);
 }

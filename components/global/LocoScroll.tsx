@@ -2,10 +2,12 @@
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
-import { ReactNode, useEffect, useRef } from 'react';
+import { ReactNode, RefObject, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import InitAnimations from '@/utils/gsapAnimations';
 import ScrollProgress from '@/utils/scrollProgress';
+import FolioRoutes from '@/routes';
+import { usePathname } from 'next/navigation';
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
@@ -15,6 +17,7 @@ type Props = {
 const LocoScroll = ({ children }: Props) => {
 
 	const containerRef = useRef<HTMLDivElement>(null);
+	const path = usePathname();
 
 	useEffect(() => {
 
@@ -56,17 +59,22 @@ const LocoScroll = ({ children }: Props) => {
 				pinType: element.style.transform ? 'transform' : 'fixed',
 			});
 
-			ScrollTrigger.addEventListener('refresh', () => {scroll?.update()});
+			ScrollTrigger.addEventListener('refresh', () => {
+				scroll?.update();
+			});
+
 			ScrollTrigger.refresh();
 
-			ctx = gsap.context(() => {
-				InitAnimations(containerRef.current);
-			}, containerRef);
+			if(path == FolioRoutes.Home){
+
+				ctx = gsap.context(() => {
+					InitAnimations(containerRef.current);
+				}, containerRef);
+			}
 		});
 
-
-
 		return () => {
+			console.log('destroy');
 
 			if (ctx) {
 				ctx.revert();
@@ -77,7 +85,7 @@ const LocoScroll = ({ children }: Props) => {
 			}
 		};
 
-	}, []);
+	}, [path]);
 
 	return (
 		<div id='loco-scroll' data-scroll-container ref={containerRef}>

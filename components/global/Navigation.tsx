@@ -1,23 +1,17 @@
+import FolioRoutes from '@/routes';
 import Link from 'next/link';
+import NavLink from './navigationItems/NavLink';
 
 const Navigation = () => {
 	return (
 		<nav className='navigation w-[90%] flex flex-row items-center justify-between'>
-			<Link className='uppercase' href='#'>folio - 2023</Link>
+			<Link className='uppercase' href={FolioRoutes.Home}>folio - 2023</Link>
 
 			<ul className='flex flex-row'>
-				<li className='nav-btn nav-active'>
-					<Link href='/'>Home</Link>
-				</li>
-				<li className='nav-btn'>
-					<Link href='#'>Works</Link>
-				</li>
-				<li className='nav-btn'>
-					<Link href='#'>About me</Link>
-				</li>
-				<li className='nav-btn'>
-					<Link href='#'>Contact</Link>
-				</li>
+				<NavLink href={FolioRoutes.Home} text='Home'/>
+				<NavLink href={FolioRoutes.Projects} text='Projects'/>
+				<NavLink href={FolioRoutes.About} text='About me'/>
+				<NavLink href={FolioRoutes.Contact} text='Contact me'/>
 			</ul>
 		</nav>
 	);
