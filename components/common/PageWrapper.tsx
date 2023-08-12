@@ -1,13 +1,15 @@
-import { ReactNode, useEffect } from "react"
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+'use client'
+
+import { ReactNode } from 'react';
 
 type PageWrapperProps = {
-    children: ReactNode;
-}
+	children: ReactNode;
+};
 
-const PageWrapper = ({ children } : PageWrapperProps) => {
-
-    return <main data-scroll-section>{children}</main>
-}
+const PageWrapper = ({ children }: PageWrapperProps) => {
+	return (
+		<main data-scroll-section>{children}</main>
+	);
+};
 
 export default PageWrapper;

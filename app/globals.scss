@@ -70,6 +70,10 @@ main {
 	background-color: $background-color-light;
 }
 
+.page-into{
+	background-color: $main;
+}
+
 @media (max-width: 767px) {
 	.navigation {
 		display: none;

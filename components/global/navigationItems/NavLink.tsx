@@ -1,7 +1,7 @@
 'use client'
 
+import AppLink from '@/components/common/AppLink';
 import FolioRoutes from '@/routes';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -27,7 +27,7 @@ const NavLink = ({ text, href } : NavLinkProps) => {
 
     return (
         <li className={`nav-btn ${activeState ? 'nav-active': ''}`}>
-			<Link href={href}>{text}</Link>
+			<AppLink href={href}>{text}</AppLink>
 	    </li>
     );
 }

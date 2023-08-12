@@ -1,15 +1,15 @@
 'use client'
 
+import AppLink from "@/components/common/AppLink";
+import FolioRoutes from "@/routes";
 import { toggleMenu } from "@/state/actions";
 import { useAppDispatch } from "@/state/hooks";
-import { Url } from "next/dist/shared/lib/router/router";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export type MenuLinkHoverEvent = React.MouseEvent<HTMLAnchorElement, MouseEvent>;
 
 type MenuLinkProps = {
-	href: Url;
+	href: FolioRoutes;
 	text: string;
 	id: string;
 	onMouseEnter: (e: MenuLinkHoverEvent) => any;
@@ -23,7 +23,7 @@ const MenuLink = ({ href, text, onMouseEnter, id }: MenuLinkProps) => {
 	const menuToggle = toggleMenu();
 
 	return (
-		<Link
+		<AppLink
 			onClick={() => menuToggle(dispatch)}
 			id={id}
 			onMouseEnter={(e) => onMouseEnter(e)}
@@ -45,7 +45,7 @@ const MenuLink = ({ href, text, onMouseEnter, id }: MenuLinkProps) => {
 				className='absolute top-0 left-0 w-full h-0 group-hover:h-full
 			transition-all link-color-block'
 			></span>
-		</Link>
+		</AppLink>
 	);
 };
 
