@@ -25,11 +25,11 @@ const ContentContainer = ({ children }: ContainerProps) => {
 
 		setTimeout(() => {
 			setVariant('hide');
-		}, 2000);
+		}, 1300);
 
 		setTimeout(() => {
 			setVariant('init');
-		}, 2600);
+		}, 1900);
 	}, [currentRoute]);
 
 
@@ -42,18 +42,22 @@ const ContentContainer = ({ children }: ContainerProps) => {
 	const variants: Variants = {
 		init: {
 			y: '100%',
+			clipPath: 'ellipse(50% 0% at 50% 100%)',
 			transition: {
 				duration: 0,
 			},
 		},
 		show: {
 			y: '0%',
+			clipPath: 'ellipse(100% 100% at 50% 50%)',
 			transition: {
 				duration: 0.5,
-				delayChildren: 1,
+				delayChildren: 0.5,
+				ease: 'easeInOut'
 			},
 		},
 		hide: {
+			clipPath: 'ellipse(50% 0% at 50% 0%)',
 			y: '-100%',
 			transition: {
 				duration: 0.5,
@@ -68,11 +72,14 @@ const ContentContainer = ({ children }: ContainerProps) => {
 		show: {
 			opacity: 0,
 			transition: {
-				duration: 0.2,
+				duration: 0.1,
 			},
 		},
 		hide: {
 			opacity: 0,
+			transition: {
+				duration: 0,
+			},
 		},
 	};
 
@@ -104,7 +111,7 @@ const ContentContainer = ({ children }: ContainerProps) => {
 				variants={variants}
 				className='fixed top-0 left-0 w-[100vw] h-[100vh] page-into z-[3000]'
 			>
-				<div className='h-full flex flex-col items-center justify-center text-6xl relative'>
+				<div className='h-full flex flex-col items-center justify-center text-7xl relative'>
 					<h2>
 						<motion.span
 							variants={firstChildVariants}
