@@ -22,18 +22,43 @@ export default function Projects() {
 					<ProjectItem i={1} title='First Project' value='project-1'>
                         <div className='p-4'>
 
+                            <div className='flex items-center justify-center w-full my-10'>
+                                <Image className='max-w-[80%]' src={img2} alt='pr-1'/>
+                            </div>
+
+                            <div className='flex flex-row justify-center p-10'>
+                                <div className='w-1/3 text-lg text-end pe-40'>
+                                    <h4 className='text-xl uppercase mb-3'>Details</h4>
+                                    <p>Link: <a className='underline' href="https://github.com">Github</a></p>
+                                    <p>Made with:</p>
+                                    <p></p>
+                                </div>
+                                <div className='w-2/3 pe-80'>
+                                    <p className='text-2xl font-light text-[#e0e0e0]'>
+                                        Mauris cursus venenatis enim vel pretium. Praesent
+                                        placerat justo nec turpis iaculis eleifend. Nullam
+                                        euismod laoreet velit, non dictum dolor convallis
+                                        nec. Praesent lacus dolor, convallis eu scelerisque
+                                        ac, congue sed metus.Mauris cursus venenatis enim vel pretium. Praesent
+                                        placerat justo nec turpis iaculis eleifend. Nullam
+                                        euismod laoreet velit, non dictum dolor convallis
+                                        nec. Praesent lacus dolor, convallis eu scelerisque
+                                        ac, congue sed metus.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <h3 className='text-4xl my-3 max-h-[50vh] italic'>Lightsaber</h3>
+
                             <div className='flex flex-row justify-center'>
-                                <p className='text-2xl mt-4 font-extralight w-1/2'>
+                                <p className='text-xl mt-4 font-extralight w-1/2'>
                                     Mauris cursus venenatis enim vel pretium. Praesent
                                     placerat justo nec turpis iaculis eleifend. Nullam
                                     euismod laoreet velit, non dictum dolor convallis
                                     nec. Praesent lacus dolor, convallis eu scelerisque
-                                    ac, congue sed metus. Cras sit amet fringilla lacus.
-                                    Nulla eget scelerisque nisl. Duis fringilla
-                                    elementum leo at feugiat. In hac habitasse platea
-                                    dictumst. Duis non sagittis ligula.
+                                    ac, congue sed metus.
                                 </p>
-                                <div className='w-1/2 h-[50vh]'>
+                                <div className='w-1/2 h-[50vh] p-4'>
                                     <Image className='max-h-full max-w-full' src={img} alt='pr-1 pic'/>
                                 </div>
                             </div>
