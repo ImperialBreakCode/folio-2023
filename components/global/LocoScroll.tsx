@@ -74,7 +74,6 @@ const LocoScroll = ({ children }: Props) => {
 		});
 
 		return () => {
-			console.log('destroy');
 
 			if (ctx) {
 				ctx.revert();

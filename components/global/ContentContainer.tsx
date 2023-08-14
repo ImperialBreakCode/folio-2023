@@ -25,11 +25,11 @@ const ContentContainer = ({ children }: ContainerProps) => {
 
 		setTimeout(() => {
 			setVariant('hide');
-		}, 1300);
+		}, 1400);
 
 		setTimeout(() => {
 			setVariant('init');
-		}, 1900);
+		}, 2000);
 	}, [currentRoute]);
 
 
@@ -52,7 +52,7 @@ const ContentContainer = ({ children }: ContainerProps) => {
 			clipPath: 'ellipse(100% 100% at 50% 50%)',
 			transition: {
 				duration: 0.5,
-				delayChildren: 0.5,
+				delayChildren: 0.6,
 				ease: 'easeInOut'
 			},
 		},
