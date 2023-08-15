@@ -73,6 +73,10 @@ main {
 	background-color: $main;
 }
 
+.color-highlight{
+	color: $main-medium;
+}
+
 @media (max-width: 767px) {
 	.navigation {
 		display: none;
