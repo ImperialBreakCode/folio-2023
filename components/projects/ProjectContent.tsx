@@ -1,10 +1,6 @@
-import { CormorantGaramond, DMSansLocal } from '@/app/fonts';
 import Image, { StaticImageData } from 'next/image';
-
-import img from '@/public/home/infi2.png';
-import img2 from '@/public/home/infinity.png';
-import img3 from '@/public/home/site_solaris2.png';
 import { ReactNode } from 'react';
+import { TbExternalLink } from 'react-icons/tb';
 
 type ProjectContentProps = {
 	children: ReactNode;
@@ -28,10 +24,12 @@ export const ProjectContent = ({
 	);
 };
 
+export type DescriptionItem = { key: string; value: string }[];
+
 type ProjectDescriptionProps = {
 	children: ReactNode;
-	properties: [{ key: string; value: string }];
-	links: [{ key: string; value: string }];
+	properties: DescriptionItem;
+	links: DescriptionItem;
 };
 
 export const ProjectDescription = ({
@@ -54,11 +52,12 @@ export const ProjectDescription = ({
 					{links.map((l) => (
 						<a
 							key={l.key}
-							className='border-[1px] text-base px-4 py-1 border-[#d4d4d4c1] rounded-full
+							href={l.value}
+							target='_blank'
+							className='border-[1px] group text-base px-4 py-1 border-[#d4d4d4c1] rounded-full
                                 hover:bg-[#c3c3c3] transition-colors hover:text-black'
-							href='#'
 						>
-							{l.value}
+							{l.key} <TbExternalLink className='inline group-hover:invert transition-all'/>
 						</a>
 					))}
 				</div>
@@ -77,19 +76,29 @@ type ProjectSectionProps = {
 	i: number;
 };
 
-export const ProjectSection = ({children, imgSrc, title, i}: ProjectSectionProps) => {
-	<div className='flex flex-row justify-center items-center px-20'>
-		<div className='w-1/2 px-10'>
-			<h3 className='text-4xl my-3 italic'>
-				<span className='color-highlight'>0{i} - </span>{title}
-			</h3>
-			<p className='text-xl mt-4 font-extralight'>
-				{children}
-			</p>
-		</div>
+export const ProjectSection = ({
+	children,
+	imgSrc,
+	title,
+	i,
+}: ProjectSectionProps) => {
+	return (
+		<div className='flex flex-row justify-center items-center px-20'>
+			<div className='w-1/2 px-10'>
+				<h3 className='text-4xl my-3 italic'>
+					<span className='color-highlight'>0{i} - </span>
+					{title}
+				</h3>
+				<p className='text-xl mt-4 font-extralight'>{children}</p>
+			</div>
 
-		<div className='w-1/2 h-[50vh] px-10 flex justify-center items-center'>
-			<Image className='max-h-full max-w-full' src={imgSrc} alt={title} />
+			<div className='w-1/2 h-[50vh] px-10 flex justify-center items-center'>
+				<Image
+					className='max-h-full max-w-full'
+					src={imgSrc}
+					alt={title}
+				/>
+			</div>
 		</div>
-	</div>;
+	);
 };
