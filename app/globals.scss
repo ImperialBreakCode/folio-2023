@@ -73,6 +73,10 @@ main {
 	background-color: $main;
 }
 
+.color-highlight{
+	color: $main-medium;
+}
+
 @media (max-width: 767px) {
 	.navigation {
 		display: none;
@@ -88,10 +92,10 @@ main {
 @layer components {
 	.nav-btn {
 		@apply mx-[10px] text-[#949494] uppercase transition-colors
-		duration-[0.3s] hover:text-[#{$main-medium}]
+		duration-300 hover:text-[#{$main-medium}]
 		relative
 		after:absolute after:bottom-0 after:left-0 after:h-[1px] after:bg-[#{$main-medium}] after:w-0
-		after:transition-all after:duration-[0.5sec]
+		after:transition-all after:duration-500
 		after:hover:w-full;
 	}
 
