@@ -85,7 +85,7 @@ export const ProjectSection = ({
 	return (
 		<div className='flex flex-row justify-center items-center px-20'>
 			<div className='w-1/2 px-10'>
-				<h3 className='text-4xl my-3 italic'>
+				<h3 className='text-4xl my-3 italic capitalize'>
 					<span className='color-highlight'>0{i} - </span>
 					{title}
 				</h3>

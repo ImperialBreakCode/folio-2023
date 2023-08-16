@@ -30,7 +30,7 @@ const ProjectItem = ({ children, title, i, ...props } : ProjectItemProps) => {
                 className='duration-0 group text-6xl font-light hover:no-underline'>
                 <span>
                     <span className='text-lg text-[#939393] me-3'>0{i}</span>
-                    <span className='text-[#b5b5b5] group-hover:text-white group-hover:italic'>{title}</span>
+                    <span className='text-[#b5b5b5] group-hover:text-white group-hover:italic capitalize'>{title}</span>
                 </span>
             </AccordionTrigger>
 			<AccordionContent>
