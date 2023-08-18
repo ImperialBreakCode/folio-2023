@@ -22,6 +22,7 @@ const PageWrapper = ({ children }: PageWrapperProps) => {
 			setVariant('exit');
 		}
 		else{
+			setVariant('regular');
 			setTimeout(() => {
 				ScrollTrigger.refresh();
 			}, 1500)

@@ -1,12 +1,8 @@
 import PageWrapper from '@/components/common/PageWrapper';
 import { CormorantGaramond, DMSansLocal } from '../fonts';
 import AboutInfoBox from '@/components/about/AboutInfoBox';
-import SkillBox from '@/components/about/SkillBox';
-
-import jsImage from '@/public/about/js_logo.png';
-import tsImage from '@/public/about/ts_logo.png';
-import csharpImage from '@/public/about/c_sharp_logo.png';
-import pythonImage from '@/public/about/python_logo.png';
+import SkillSection from '@/components/about/SkillSection';
+import Languages from '@/components/about/Skills/Languages';
 
 export default function About() {
 	return (
@@ -48,19 +44,10 @@ export default function About() {
 						Vestibulum vel diam auctor.
 					</AboutInfoBox>
 				</section>
-				<section className='px-4'>
-					<div className='bg-main-light p-10 pb-20'>
-						<h2 className='text-7xl uppercase text-end mb-20'>
-							languages
-						</h2>
-						<div className='grid grid-cols-3 grid-rows-2 gap-36 px-10'>
-							<SkillBox i={1} name='javascript' src={jsImage} />
-							<SkillBox i={2} name='typescript' src={tsImage} />
-							<SkillBox i={3} name='C#' src={csharpImage} />
-							<SkillBox i={4} name='Python' src={pythonImage} />
-						</div>
-					</div>
-				</section>
+
+				<SkillSection title='languages' light>
+					<Languages/>
+				</SkillSection>
 			</div>
 		</PageWrapper>
 	);

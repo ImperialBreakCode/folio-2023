@@ -1,17 +1,17 @@
-import FolioRoutes from "@/routes";
+import FolioRoutes from '@/routes';
 
 export enum ActionTypes {
 	ToggleMenu = 'TOGGLE_MENU',
-    RouteChange = 'ROUTE_CHANGE'
+	RouteChange = 'ROUTE_CHANGE',
 }
 
 export interface MenuState {
-    type: ActionTypes.ToggleMenu;
+	type: ActionTypes.ToggleMenu;
 }
 
 export interface RouteChange {
-    type: ActionTypes.RouteChange,
-    route: FolioRoutes;
+	type: ActionTypes.RouteChange;
+	route: FolioRoutes;
 }
 
 export type GlobalAction = MenuState | RouteChange;

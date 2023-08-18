@@ -2,7 +2,7 @@
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import LocomotiveScroll from 'locomotive-scroll';
-import { ReactNode, RefObject, useEffect, useRef } from 'react';
+import { ReactNode, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import InitAnimations from '@/utils/gsapAnimations';
 import ScrollProgress from '@/utils/scrollProgress';
@@ -15,18 +15,16 @@ type Props = {
 };
 
 const LocoScroll = ({ children }: Props) => {
-
 	const containerRef = useRef<HTMLDivElement>(null);
 	const path = usePathname();
 
 	useEffect(() => {
 
 		const element = containerRef.current as HTMLDivElement;
-		let scroll : LocomotiveScroll | null;
+		let scroll: LocomotiveScroll | null;
 		let ctx: gsap.Context | null;
 
-		import('locomotive-scroll').then(locomotiveModule => {
-
+		import('locomotive-scroll').then((locomotiveModule) => {
 			scroll = new locomotiveModule.default({
 				el: element,
 				smooth: true,
@@ -74,7 +72,6 @@ const LocoScroll = ({ children }: Props) => {
 		});
 
 		return () => {
-
 			if (ctx) {
 				ctx.revert();
 			}
@@ -83,7 +80,6 @@ const LocoScroll = ({ children }: Props) => {
 				scroll.destroy();
 			}
 		};
-
 	}, [path]);
 
 	return (
