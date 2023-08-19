@@ -5,6 +5,7 @@ import SkillSection from '@/components/about/SkillSection';
 import Languages from '@/components/about/Skills/Languages';
 import FrontEnd from '@/components/about/Skills/FrontEnd';
 import Backend from '@/components/about/Skills/BackEnd';
+import Cloud from '@/components/about/Skills/Cloud';
 
 export default function About() {
 	return (
@@ -50,11 +51,14 @@ export default function About() {
 				<SkillSection title='languages' light>
 					<Languages />
 				</SkillSection>
-				<SkillSection title='framewors' rows={3}>
+				<SkillSection title='front end' rows={3}>
 					<FrontEnd />
 				</SkillSection>
-				<SkillSection title='styling' light>
+				<SkillSection title='back end' light>
 					<Backend />
+				</SkillSection>
+				<SkillSection title='Cloud' rows={1}>
+					<Cloud />
 				</SkillSection>
 			</div>
 		</PageWrapper>
