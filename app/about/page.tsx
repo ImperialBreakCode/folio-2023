@@ -3,6 +3,8 @@ import { CormorantGaramond, DMSansLocal } from '../fonts';
 import AboutInfoBox from '@/components/about/AboutInfoBox';
 import SkillSection from '@/components/about/SkillSection';
 import Languages from '@/components/about/Skills/Languages';
+import FrontEnd from '@/components/about/Skills/FrontEnd';
+import Backend from '@/components/about/Skills/BackEnd';
 
 export default function About() {
 	return (
@@ -46,7 +48,13 @@ export default function About() {
 				</section>
 
 				<SkillSection title='languages' light>
-					<Languages/>
+					<Languages />
+				</SkillSection>
+				<SkillSection title='framewors' rows={3}>
+					<FrontEnd />
+				</SkillSection>
+				<SkillSection title='styling' light>
+					<Backend />
 				</SkillSection>
 			</div>
 		</PageWrapper>
