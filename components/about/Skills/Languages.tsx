@@ -8,10 +8,10 @@ import pythonImage from '@/public/about/python_logo.png';
 const Languages = () => {
 	return (
 		<>
-			<SkillBox i={1} name='javascript' src={jsImage} />
-			<SkillBox i={2} name='typescript' src={tsImage} />
-			<SkillBox i={3} name='C#' src={csharpImage} />
-			<SkillBox i={4} name='Python' src={pythonImage} />
+			<SkillBox name='javascript' src={jsImage} />
+			<SkillBox name='typescript' src={tsImage} />
+			<SkillBox name='C#' src={csharpImage} />
+			<SkillBox name='Python' src={pythonImage} />
 		</>
 	);
 };
