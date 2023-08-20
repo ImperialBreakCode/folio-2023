@@ -6,6 +6,7 @@ import Languages from '@/components/about/Skills/Languages';
 import FrontEnd from '@/components/about/Skills/FrontEnd';
 import Backend from '@/components/about/Skills/BackEnd';
 import Cloud from '@/components/about/Skills/Cloud';
+import { BeyondBuble, BeyondItem, BeyondRow } from '@/components/about/BeyondSection';
 
 export default function About() {
 	return (
@@ -60,6 +61,55 @@ export default function About() {
 				<SkillSection title='Cloud' rows={1}>
 					<Cloud />
 				</SkillSection>
+
+				<section
+					id='beyond-sec'
+					className='m-h-[100vh] pt-20 border-t-[1px] border-[#333333]'
+				>
+					<div
+						data-scroll
+						data-scroll-sticky
+						data-scroll-target='#beyond-sec'
+						className='h-[30vh]'
+					>
+						<h2
+							className={`text-9xl text-center ${CormorantGaramond.className}`}
+						>
+							Beyond the web
+						</h2>
+					</div>
+
+					<div className='m-h-[100vh] bg-main-light relative px-4 py-20'>
+
+						<BeyondItem title='Machine Learning (Basic knowledge)'>
+							<BeyondRow title='PyTorch'>
+								<BeyondBuble>
+									basic experience
+								</BeyondBuble>
+								<BeyondBuble>
+									with torchvision
+								</BeyondBuble>
+							</BeyondRow>
+						</BeyondItem>
+
+						<BeyondItem title='Desktop Apps'>
+							<BeyondRow title='ElectronJS'>
+								<BeyondBuble>
+									basic experience
+								</BeyondBuble>
+							</BeyondRow>
+						</BeyondItem>
+
+						<BeyondItem title='Mobile Apps'>
+							<BeyondRow title='IOS Apps with Swift'>
+								<BeyondBuble>
+									basic experience
+								</BeyondBuble>
+							</BeyondRow>
+						</BeyondItem>
+
+					</div>
+				</section>
 			</div>
 		</PageWrapper>
 	);

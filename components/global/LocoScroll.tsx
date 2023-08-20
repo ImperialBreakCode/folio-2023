@@ -32,7 +32,7 @@ const LocoScroll = ({ children }: Props) => {
 					breakpoint: 0,
 					smooth: true,
 				},
-				//multiplier: 1
+				multiplier: 1
 			});
 
 			scroll.on('scroll', ScrollTrigger.update);
