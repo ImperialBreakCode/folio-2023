@@ -69,12 +69,24 @@ main {
 	background-color: $background-color-light;
 }
 
+.bg-main-light{
+	background-color: #c7c7c7;
+
+	h3, h2, p{
+		color: black;
+	}
+}
+
 .page-into{
 	background-color: $main;
 }
 
 .color-highlight{
 	color: $main-medium;
+}
+
+.color-highlight-dark{
+	color: $main!important;
 }
 
 @media (max-width: 767px) {

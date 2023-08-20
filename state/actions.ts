@@ -14,7 +14,7 @@ export const routeState = () => {
 	return (dispatch: Dispatch<RouteChange>, route: FolioRoutes) => {
 		dispatch({
 			type: ActionTypes.RouteChange,
-			route
-		})
+			route,
+		});
 	};
 };

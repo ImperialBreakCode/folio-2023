@@ -17,6 +17,7 @@ const ContentContainer = ({ children }: ContainerProps) => {
 	const location = currentRoute.substring(1);
 
 	const path = usePathname();
+
     const dispatcher = useAppDispatch();
     const changeRouteState = routeState();
 
