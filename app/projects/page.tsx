@@ -34,9 +34,9 @@ export default function Projects() {
 
 	return (
 		<PageWrapper>
-			<div className={`${DMSansLocal.className} px-10`}>
+			<div className={`${DMSansLocal.className} px-2 sm:px-5 md:px-10`}>
 				<h1
-					className={`text-8xl mt-10 mb-20 uppercase ${CormorantGaramond.className}`}
+					className={`text-6xl mx-5 sm:mx-0 sm:text-8xl mt-10 mb-20 uppercase ${CormorantGaramond.className}`}
 				>
 					My Projects
 				</h1>

@@ -27,9 +27,9 @@ const ProjectItem = ({ children, title, i, ...props } : ProjectItemProps) => {
 		<AccordionItem className='border-[#717171]' {...props}>
 			<AccordionTrigger
                 onClick={() => onClickEvent()}
-                className='duration-0 group text-6xl font-light hover:no-underline'>
+                className='duration-0 group text-xl sm:text-4xl lg:text-6xl font-light hover:no-underline'>
                 <span>
-                    <span className='text-lg text-[#939393] me-3'>0{i}</span>
+                    <span className='text-sm sm:text-lg text-[#939393] me-3'>0{i}</span>
                     <span className='text-[#b5b5b5] group-hover:text-white group-hover:italic capitalize'>{title}</span>
                 </span>
             </AccordionTrigger>
