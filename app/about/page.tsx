@@ -12,13 +12,13 @@ export default function About() {
 	return (
 		<PageWrapper>
 			<div className={DMSansLocal.className}>
-				<section className='px-10 py-20'>
+				<section className='px-10 py-10 lg:py-20'>
 					<h1
-						className={`text-8xl mb-10 uppercase ${CormorantGaramond.className}`}
+						className={`text-6xl sm:text-8xl mb-10 uppercase ${CormorantGaramond.className}`}
 					>
 						About me
 					</h1>
-					<p className='text-2xl text-[#c0c0c0] w-[60%] font-light'>
+					<p className='sm:text-xl md:text-2xl text-[#c0c0c0] lg:w-[60%] font-light'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Vestibulum vel diam auctor, fermentum quam nec, mollis
 						enim. Nulla condimentum leo at arcu commodo, ac tempor
@@ -32,7 +32,8 @@ export default function About() {
 						consequat commodo.
 					</p>
 				</section>
-				<section className='p-20 flex flex-row justify-between'>
+				<section className='px-10 xl:px-20 py-10 lg:py-20 flex flex-col lg:flex-row 
+					items-center lg:justify-between lg:items-start'>
 					<AboutInfoBox i={1} title='front end'>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Vestibulum vel diam auctor, fermentum quam nec, mollis
