@@ -85,6 +85,15 @@ main {
 	color: $main-medium;
 }
 
+.bg-light-color{
+
+	h2, p{
+		color: black;
+	}
+
+	background-color: lighten($color: $main-medium, $amount: 10);
+}
+
 .color-highlight-dark{
 	color: $main!important;
 }
