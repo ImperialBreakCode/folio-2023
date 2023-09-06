@@ -1,13 +1,14 @@
 import { ReactNode } from 'react';
 
+
 const ContactButton = ({ children }: { children: ReactNode }) => {
     return (
         <a
             href='#'
-            className='border-t-[1px] border-[#878787] w-full p-4 mx-4 relative group'
+            className='border-t-[1px] border-[#878787] w-full p-10 mx-4 relative group'
         >
             <span
-                className='text-2xl relative z-10 
+                className='text-3xl relative z-10 uppercase
                 group-hover:text-black transition-colors duration-200'
             >
                 {children}
