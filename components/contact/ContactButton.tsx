@@ -8,7 +8,7 @@ const ContactButton = ({ children }: { children: ReactNode }) => {
             className='border-t-[1px] border-[#878787] w-full p-10 mx-4 relative group'
         >
             <span
-                className='text-3xl relative z-10 uppercase
+                className='text-4xl relative z-10 uppercase
                 group-hover:text-black transition-colors duration-200'
             >
                 {children}
