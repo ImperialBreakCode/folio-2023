@@ -5,6 +5,7 @@ import img1 from '@/public/home/site_solaris2.png';
 import img2 from '@/public/home/infinity.png';
 import img3 from '@/public/home/infi2.png';
 import { ReactNode } from 'react';
+import FolioRoutes from '@/routes';
 
 type WorksProps = {
 	className: string;
@@ -50,7 +51,7 @@ const WorksShowcase = ({ className }: WorksProps) => {
 				</div>
 			</div>
 			<div>
-				<RedirectBtn className='text-black'>
+				<RedirectBtn href={FolioRoutes.Projects} className='text-black'>
 					More <i className='text-black'>detail</i> about my projects
 				</RedirectBtn>
 			</div>
