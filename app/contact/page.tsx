@@ -15,14 +15,16 @@ export default function Contact() {
         <PageWrapper>
             <div>
                 <h1
-                    className={`text-9xl uppercase ms-10 mt-10 mb-36 text-center ${CormorantGaramond.className}`}
+                    className={`text-6xl sm:text-8xl lg:text-9xl uppercase 
+                        ms-10 mt-10 mb-20 sm:mb-36 text-center ${CormorantGaramond.className}`}
                 >
                     <span className='translate-x-[-50%] inline-block'>Get in</span> 
                     <br /> 
                     <span className='translate-x-[20%] inline-block'>touch</span>
                 </h1>
 
-                <div className='flex flex-row items-center justify-center mb-24 px-10'>
+                <div className='flex flex-col sm:flex-row items-center justify-center 
+                    mb-10 sm:mb-24 px-5 sm:px-10'>
                     <ContactButton>
                         download cv{' '}
                         <GrLinkDown className='invert group-hover:invert-0 inline duration-200 transition-all' />
@@ -33,22 +35,22 @@ export default function Contact() {
                     </ContactButton>
                 </div>
 
-                <h2 className='ps-20 text-9xl mb-10'>Information </h2>
+                <h2 className='ps-4 lg:ps-20 text-5xl sm:text-7xl lg:text-9xl mb-10'>Information </h2>
 
-                <div className='p-5 flex flex-row'>
+                <div className='p-5 flex flex-col sm:flex-row'>
 
-                    <div className='w-1/2 flex flex-col justify-center'>
-                        <div className='ps-20 py-5'>
-                            <h2 className='uppercase font-light'>based in</h2>
-                            <p className='underline italic text-xl'>Veliko Tarnovo, Bulgaria</p>
+                    <div className='sm:w-1/2 flex flex-col justify-center'>
+                        <div className='lg:ps-20 sm:py-5'>
+                            <h2 className='uppercase font-light text-sm lg:text-base'>based in</h2>
+                            <p className='underline italic lg:text-xl'>Veliko Tarnovo, Bulgaria</p>
                         </div>
-                        <div className='ps-20 py-5'>
-                            <h2 className='uppercase font-light'>student at</h2>
-                            <p className='underline italic text-xl'>University of Veliko Tarnovo</p>
+                        <div className='lg:ps-20 py-5'>
+                            <h2 className='uppercase font-light text-sm lg:text-base'>student at</h2>
+                            <p className='underline italic lg:text-xl'>University of Veliko Tarnovo</p>
                         </div>
                     </div>
 
-                    <div className={`w-1/2 ${styles.lightSection}`}>
+                    <div className={`sm:w-1/2 ${styles.lightSection}`}>
                         <ContactInfo title='email'>email@gmail.com</ContactInfo>
                         <ContactInfo title='phone'>08808880</ContactInfo>
                     </div>
