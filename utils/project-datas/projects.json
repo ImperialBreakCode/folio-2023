@@ -2,7 +2,7 @@
 	{
         "title": "First project",
 		"properties": [
-			{ "key": "language", "value": "what" },
+			{ "key": "language", "value": "python" },
 			{ "key": "date", "value": "today" }
 		],
 		"links": [{ "key": "github", "value": "https://github.com" }],
