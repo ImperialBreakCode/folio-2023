@@ -1,14 +1,34 @@
 [
 	{
-        "title": "First project",
+		"title": "Infinity web",
 		"properties": [
 			{ "key": "language", "value": "python" },
 			{ "key": "date", "value": "today" }
 		],
-		"links": [{ "key": "github", "value": "https://github.com" }],
+		"links": [
+			{
+				"key": "source code",
+				"value": "https://github.com/ImperialBreakCode/infinity-web"
+			}
+		],
 		"sections": [
 			{
-                "title": "lightsaber",
+				"title": "Main site",
+				"image": null,
+				"text": "Mauris cursus venenatis enim vel pretium. Praesent placerat justo nec turpis iaculis eleifend. Nullam euismod laoreet velit, non dictum dolor convallis nec. Praesent lacus dolor, convallis eu scelerisque ac, congue sed metus."
+			},
+			{
+				"title": "Articles",
+				"image": null,
+				"text": "Mauris cursus venenatis enim vel pretium. Praesent placerat justo nec turpis iaculis eleifend. Nullam euismod laoreet velit, non dictum dolor convallis nec. Praesent lacus dolor, convallis eu scelerisque ac, congue sed metus."
+			},
+			{
+				"title": "Accounts & settings",
+				"image": null,
+				"text": "Mauris cursus venenatis enim vel pretium. Praesent placerat justo nec turpis iaculis eleifend. Nullam euismod laoreet velit, non dictum dolor convallis nec. Praesent lacus dolor, convallis eu scelerisque ac, congue sed metus."
+			},
+			{
+				"title": "More",
 				"image": null,
 				"text": "Mauris cursus venenatis enim vel pretium. Praesent placerat justo nec turpis iaculis eleifend. Nullam euismod laoreet velit, non dictum dolor convallis nec. Praesent lacus dolor, convallis eu scelerisque ac, congue sed metus."
 			}

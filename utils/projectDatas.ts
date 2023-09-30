@@ -1,13 +1,22 @@
 import { readFileSync } from 'fs';
 
-import mainImg0 from '@/public/home/infi2.png';
-import imgSec0 from '@/public/home/infinity.png';
+// infinity web project
+import mainImg0 from '@/public/projects/infinity-web/infwebTitle.png';
+import imgSec00 from '@/public/projects/infinity-web/infsite.png';
+import imgSec01 from '@/public/projects/infinity-web/articles.png';
+import imgSec02 from '@/public/projects/infinity-web/settings2.png';
+import imgSec03 from '@/public/projects/infinity-web/more.png';
+
 import { StaticImageData } from 'next/image';
 import { DescriptionItem } from '@/components/projects/ProjectContent';
 
 const images: { [key: string]: StaticImageData } = {
+	// infinity web project
 	mainImg0,
-	imgSec0,
+	imgSec00,
+	imgSec01,
+	imgSec02,
+	imgSec03,
 };
 
 type SectionsJson = {
@@ -48,13 +57,13 @@ export function getProjectDatas(): ProjectDatas {
 			'utf-8'
 		);
 
-		projectData[i]['image'] = images[`imgSec${i}`];
+		projectData[i]['image'] = images[`mainImg${i}`];
 		projectData[i]['description'] = descr;
 
 		const sections = projectData[i]['sections'] as SectionsJson;
 
 		for (let s = 0; s < sections.length; s++) {
-			sections[s]['image'] = images[`imgSec${s}`];
+			sections[s]['image'] = images[`imgSec${i}${s}`];
 		}
 	}
 
